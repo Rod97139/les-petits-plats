@@ -1,0 +1,22 @@
+{
+  "name": "les-petits-plats",
+  "version": "1.0.0",
+  "description": "",
+  "main": "App.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rod97139/les-petits-plats.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rod97139/les-petits-plats/issues"
+  },
+  "homepage": "https://github.com/Rod97139/les-petits-plats#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}
