@@ -1,1 +1,3 @@
 # les-petits-plats
+
+```npx tailwindcss -i ./src/css/input.css -o ./src/css/output.css --watch```
