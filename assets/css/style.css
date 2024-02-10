@@ -2,3 +2,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Custom styles */
+
+.btn-text-search::after {
+    content: url('../icons/searchCTA.svg');
+    position: relative;
+    top: 20px;
+    right: 60px;
+}
+.btn-text-search:hover::after {
+    content: url('../icons/searchCTAv2.svg');
+}
+
+.text-search-container {
+    background-image: url('../images/bg.png');
+}

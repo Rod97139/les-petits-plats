@@ -10,21 +10,40 @@
 </head>
 <body>
     <header>
-        <div>
-            <img src="assets/icons/Logo.png" alt="logo les petis plats">
-            <h1>CHERCHEZ PARMI PLUS DE 1500 RECETTES 
-                DU QUOTIDIEN,SIMPLES ET DÉLICIEUSES</h1>
-                <form id="text-form"  action="" method="post"></form>
-                <input class="form-input px-4 py-3 rounded-full" type="search">
+        <div class="text-search-container">
+            <h1 class="text-transparent">Les Petits Plats <img src="assets/icons/Logo.png" alt="logo les petis plats"></h1>
+            <h2 class="text-yellow-500">CHERCHEZ PARMI PLUS DE 1500 RECETTES 
+                DU QUOTIDIEN,SIMPLES ET DÉLICIEUSES</h2>
+                <form id="text-search-form"  action="" method="post">
+                    <input class="form-input px-4 py-3 rounded"  id="text" name="text" type="search">
+                    <label class="hidden" for="text">Text search</label>
+                    <button class="form-button px-1 py-3 text-transparent text-xs btn-text-search" type="submit">Search</button>
+                </form>
         </div>
-        <div></div>
+        <div class="select-search-container">
+            <form action="" method="post">
+                <!-- ul li  -->
+                <select class="form-input px-4 py-3 rounded" name="select-search" id="select-search">
+                    Appareils
+                    <option value="1">Ingrédients</option>
+                </select>
+                <select class="form-input px-4 py-3 rounded" name="select-search" id="select-search">
+                    <option value="1">Appareils</option>
+                </select>
+                <select class="form-input px-4 py-3 rounded" name="select-search" id="select-search">
+                    <option value="1">Ustensiles</option>
+                </select>
+                <button class="form-button px-1 py-3 text-transparent text-xs btn-select-search" type="submit">Search</button>
+            </form>
+
+        </div>
         
 
     </header>
     <main>
-        <h1 class="text-3xl font-bold underline">
+        <div class="text-3xl font-bold underline">
             Hello world!
-          </h1>
+          </div>
     </main>
     <footer></footer>
     
