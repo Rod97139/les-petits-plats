@@ -1,5 +1,5 @@
 import { recipes } from "../../data/recipes.js"
-import { recipesTemplate } from "./templates/recipes.js"
+import { recipesTemplate } from "./templates/recipesTemplate.js"
 
 
 
