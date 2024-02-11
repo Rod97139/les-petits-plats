@@ -9,9 +9,10 @@
     <script type="module" src="assets/js/App.js" defer></script>
 </head>
 <body>
-    <header>
+    <header class="mx-auto">
         <div class="text-search-container">
-            <h1 class="text-transparent">Les Petits Plats <img src="assets/icons/Logo.png" alt="logo les petis plats"></h1>
+            <h1 class="hidden">Les Petits Plats </h1>
+            <img src="assets/icons/Logo.png" alt="logo les petis plats">
             <h2 class="text-yellow-500">CHERCHEZ PARMI PLUS DE 1500 RECETTES 
                 DU QUOTIDIEN,SIMPLES ET DÉLICIEUSES</h2>
                 <form id="text-search-form"  action="" method="post">
@@ -20,8 +21,8 @@
                     <button class="form-button px-1 py-3 text-transparent text-xs btn-text-search" type="submit">Search</button>
                 </form>
         </div>
-        <div class="select-search-container">
-            <form action="" method="post">
+        <div class="select-search-container bg-gray-200 mx-auto">
+            <form action="" method="post" class="mx-auto">
                 <!-- ul li  -->
                 <select class="form-input px-4 py-3 rounded" name="select-search" id="select-search">
                     Appareils
@@ -40,12 +41,9 @@
         
 
     </header>
-    <main>
-        <div class="text-3xl font-bold underline">
-            Hello world!
-          </div>
-    </main>
-    <footer></footer>
-    
+    <main class="bg-gray-200 mx-auto">
+        <section class="recipes-wrapper flex flex-wrap justify-center">
+          </section>
+    </main>    
 </body>
 </html>
