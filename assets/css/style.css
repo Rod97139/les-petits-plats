@@ -27,11 +27,33 @@
 
 /* Custom styles */
 
+#text-search-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: center; */
+    height: 100%;
+    margin-block: 120px;
+}
+
+.input-text-search {
+    width: 1080px;
+    height: 64px;
+
+}
+
+.btn-text-search {
+    position: absolute;
+    top: 445px;
+    right: 415px;
+
+
+
+    
+}
+
 .btn-text-search::after {
     content: url('../icons/searchCTA.svg');
-    position: relative;
-    top: 20px;
-    right: 60px;
 }
 .btn-text-search:hover::after {
     content: url('../icons/searchCTAv2.svg');
@@ -39,4 +61,7 @@
 
 .text-search-container {
     background-image: url('../images/bg.png');
+    background-size: cover;
+    height: 667px;
 }
+

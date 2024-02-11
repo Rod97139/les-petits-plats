@@ -9,17 +9,18 @@
     <script type="module" src="assets/js/App.js" defer></script>
 </head>
 <body class="font-manrope">
-    <header class="mx-auto">
-        <div class="text-search-container">
+    <header class="">
+        <div class="text-search-container p-8">
             <h1 class="hidden">Les Petits Plats </h1>
             <img src="assets/icons/Logo.png" alt="logo les petis plats">
-            <h2 class="text-yellow-500">CHERCHEZ PARMI PLUS DE 1500 RECETTES 
-                DU QUOTIDIEN,SIMPLES ET DÉLICIEUSES</h2>
-                <form id="text-search-form"  action="" method="post">
-                    <input class="form-input px-4 py-3 rounded"  id="text" name="text" type="search">
-                    <label class="hidden" for="text">Text search</label>
-                    <button class="form-button px-1 py-3 text-transparent text-xs btn-text-search" type="submit">Search</button>
-                </form>
+            <h2 class="text-yellow-500 text-6xl text-center font-anton mx-64 mt-36">CHERCHEZ PARMI PLUS DE 1500 RECETTES 
+                DU QUOTIDIEN,SIMPLES ET DÉLICIEUSES
+            </h2>
+            <form id="text-search-form"  action="" method="post">
+                <input class="input-text-search form-input  h-24 px-4 py-3 rounded" placeholder="Rechercher une recette, un ingrédient, ..." id="text" name="text" type="search">
+                <label class="hidden" for="text">Text search</label>
+                <button class="form-button px-1 py-3 text-transparent text-xs btn-text-search" type="submit">Search</button>
+            </form>
         </div>
         <div class="select-search-container bg-gray-200 mx-auto">
             <form action="" method="post" class="mx-auto">
@@ -42,7 +43,7 @@
 
     </header>
     <main class="bg-gray-200 mx-auto">
-        <section class="recipes-wrapper flex flex-wrap justify-center">
+        <section class="recipes-wrapper flex max-md:flex-col justify-center md:flex-wrap">
           </section>
     </main>    
 </body>

@@ -1093,14 +1093,14 @@ select {
   margin-right: 1.5rem;
 }
 
+.mx-64 {
+  margin-left: 16rem;
+  margin-right: 16rem;
+}
+
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
-}
-
-.my-2 {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
 }
 
 .my-5 {
@@ -1111,6 +1111,10 @@ select {
 .my-9 {
   margin-top: 2.25rem;
   margin-bottom: 2.25rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
 }
 
 .ml-2 {
@@ -1129,16 +1133,16 @@ select {
   margin-top: 0.5rem;
 }
 
+.mt-36 {
+  margin-top: 9rem;
+}
+
 .mt-4 {
   margin-top: 1rem;
 }
 
 .mt-8 {
   margin-top: 2rem;
-}
-
-.mb-2 {
-  margin-bottom: 0.5rem;
 }
 
 .box-border {
@@ -1271,6 +1275,10 @@ select {
 
 .w-full {
   width: 100%;
+}
+
+.min-w-96 {
+  min-width: 24rem;
 }
 
 .max-w-4xl {
@@ -2464,6 +2472,10 @@ select {
   padding: 1.25rem;
 }
 
+.p-8 {
+  padding: 2rem;
+}
+
 .px-0 {
   padding-left: 0px;
   padding-right: 0px;
@@ -2591,6 +2603,11 @@ select {
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
+}
+
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
 }
 
 .text-lg {
@@ -3096,11 +3113,28 @@ select {
 
 /* Custom styles */
 
+#text-search-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  height: 100%;
+  margin-block: 120px;
+}
+
+.input-text-search {
+  width: 1080px;
+  height: 64px;
+}
+
+.btn-text-search {
+  position: absolute;
+  top: 445px;
+  right: 415px;
+}
+
 .btn-text-search::after {
   content: url('../icons/searchCTA.svg');
-  position: relative;
-  top: 20px;
-  right: 60px;
 }
 
 .btn-text-search:hover::after {
@@ -3109,6 +3143,8 @@ select {
 
 .text-search-container {
   background-image: url('../images/bg.png');
+  background-size: cover;
+  height: 667px;
 }
 
 @media (min-width: 640px) {
@@ -3248,6 +3284,12 @@ select {
   text-align: center;
 }
 
+@media not all and (min-width: 768px) {
+  .max-md\:flex-col {
+    flex-direction: column;
+  }
+}
+
 @media (min-width: 640px) {
   .sm\:underline {
     text-decoration-line: underline;
@@ -3262,6 +3304,10 @@ select {
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  .md\:flex-wrap {
+    flex-wrap: wrap;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -3271,3 +3317,4 @@ select {
     }
   }
 }
+
