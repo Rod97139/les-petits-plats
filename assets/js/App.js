@@ -7,6 +7,9 @@ class App {
 
     constructor() {
         this.recipes = recipes
+        this.totalRecipes = this.recipes.length
+        this.selectedRecipes = []
+        this.totalSelectedRecipes = this.selectedRecipes.length
         this.$recipesWrapper = document.querySelector('.recipes-wrapper')
     }
 

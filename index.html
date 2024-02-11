@@ -8,8 +8,8 @@
     <title>Les Petits Plats</title>
     <script type="module" src="assets/js/App.js" defer></script>
 </head>
-<body class="font-manrope">
-    <header class="">
+<body class="font-manrope bg-gray-200">
+    <header>
         <div class="text-search-container p-8">
             <h1 class="hidden">Les Petits Plats </h1>
             <img src="assets/icons/Logo.png" alt="logo les petis plats">
@@ -22,19 +22,40 @@
                 <button class="form-button px-1 py-3 text-transparent text-xs btn-text-search" type="submit">Search</button>
             </form>
         </div>
-        <div class="select-search-container bg-gray-200 mx-auto">
+        <div class="select-search-container mx-8 my-6">
             <form action="" method="post" class="mx-auto">
                 <!-- ul li  -->
-                <select class="form-input px-4 py-3 rounded" name="select-search" id="select-search">
-                    Appareils
-                    <option value="1">Ingrédients</option>
-                </select>
-                <select class="form-input px-4 py-3 rounded" name="select-search" id="select-search">
+                <ul>Ingrédients
+                    <li>
+                        <label class="button-checkbox">
+                            <input type="checkbox" id="checkbox1" />
+                            <span tabindex="0" role="button" aria-pressed="false">Button</span>
+                        </label>
+                    </li>
+                </ul>
+                <ul>Appareils
+                    <li>
+                        <label class="button-checkbox">
+                            <input type="checkbox" id="checkbox1" />
+                            <span tabindex="0" role="button" aria-pressed="false">Button</span>
+                        </label>
+                    </li>
+                </ul>
+                <ul>Ustensiles
+                    <li>
+                        <label class="button-checkbox">
+                            <input type="checkbox" id="checkbox1" />
+                            <span tabindex="0" role="button" aria-pressed="false">Button</span>
+                        </label>
+                    </li>
+                </ul>
+               
+                <!-- <select class="form-input px-4 py-3 rounded" name="select-search" id="select-search2">
                     <option value="1">Appareils</option>
                 </select>
-                <select class="form-input px-4 py-3 rounded" name="select-search" id="select-search">
+                <select class="form-input px-4 py-3 rounded" name="select-search" id="select-search3">
                     <option value="1">Ustensiles</option>
-                </select>
+                </select> -->
                 <button class="form-button px-1 py-3 text-transparent text-xs btn-select-search" type="submit">Search</button>
             </form>
 
@@ -42,7 +63,7 @@
         
 
     </header>
-    <main class="bg-gray-200 mx-auto">
+    <main class="mx-auto">
         <section class="recipes-wrapper flex max-md:flex-col justify-center md:flex-wrap">
           </section>
     </main>    
