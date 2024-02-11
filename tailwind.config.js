@@ -3,9 +3,9 @@ module.exports = {
   content: ["./**/*.{html,js}"],
   theme: {
     fontFamily: {
-      'body': ['Anton', 'Arial', 'sans-serif']
+      anton: ["Anton", "sans-serif"],
+      manrope: ["Manrope", "sans-serif"],
     },
-    extend: {},
   },
   plugins: [
     require('@tailwindcss/forms')

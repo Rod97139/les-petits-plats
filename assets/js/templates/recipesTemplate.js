@@ -42,6 +42,9 @@ export const recipesTemplate = (recipesData) => {
             ingredientDOM.appendChild(name);
             ingredientDOM.appendChild(quantity);
             ingredientsContent.appendChild(ingredientDOM);
+
+            name.classList.add('font-medium');
+            quantity.classList.add('text-gray-500');
         });
 
         cardHeader.appendChild(img);
@@ -63,13 +66,13 @@ export const recipesTemplate = (recipesData) => {
                 img.classList.add('w-full', 'h-80', 'object-cover');
                 timeElement.classList.add('absolute', 'top-5', 'right-6', 'bg-yellow-300', 'px-5', 'py-1', 'rounded-2xl', 'text-black',  'shadow-lg');
             cardBody.classList.add('basis-2/3', 'flex', 'flex-col', 'p-5', 'h-full');
-                cardTitle.classList.add('text-2xl', 'font-["Anton"]', 'my-5');
+                cardTitle.classList.add('text-2xl', 'my-5', 'font-anton');
                 cardContainer.classList.add('flex', 'flex-col', 'space-y-5', 'h-full', 'overflow-hidden');
                     descriptionContainer.classList.add('basis-2/5', 'max-h-fit', 'overflow-hidden');
-                    //     descriptionTitle.classList.add('text-xl', 'font-["Anton"]');
+                        descriptionTitle.classList.add('font-bold', 'text-gray-500', 'mb-2');
                     //     descriptionContent.classList.add('text-justify');
                     ingredientsContainer.classList.add('basis-3/5', 'h-full');
-                    //     ingredientsTitle.classList.add('text-xl', 'font-["Anton"]');
+                        ingredientsTitle.classList.add('font-bold', 'text-gray-500');
                         ingredientsContent.classList.add('grid', 'grid-cols-2', 'gap-2', 'py-5');
                 
 

@@ -3,11 +3,27 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @layer base {
-    html {
-      font-family: "Proxima Nova", system-ui, sans-serif;
-    }
-  } */
+
+@font-face {
+    font-family: 'Anton';
+    src: url('../css/fonts/Anton-Regular.ttf') format("trueType");
+}
+@font-face {
+    font-family: 'Manrope';
+    font-weight: 400;
+    src: url('../css/fonts/Manrope-Regular.ttf') format("trueType");
+}
+@font-face {
+    font-family: 'Manrope';
+    font-weight: 500;
+    src: url('../css/fonts/Manrope-Medium.ttf') format("trueType");
+}
+@font-face {
+    font-family: 'Manrope';
+    font-weight: 700;
+    src: url('../css/fonts/Manrope-Bold.ttf') format("trueType");
+}
+
 
 /* Custom styles */
 

@@ -1098,6 +1098,11 @@ select {
   margin-right: auto;
 }
 
+.my-2 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .my-5 {
   margin-top: 1.25rem;
   margin-bottom: 1.25rem;
@@ -1130,6 +1135,10 @@ select {
 
 .mt-8 {
   margin-top: 2rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
 }
 
 .box-border {
@@ -1302,10 +1311,6 @@ select {
 
 .basis-2\/3 {
   flex-basis: 66.666667%;
-}
-
-.basis-1\/2 {
-  flex-basis: 50%;
 }
 
 .basis-2\/5 {
@@ -1832,10 +1837,6 @@ select {
 
 .gap-6 {
   gap: 1.5rem;
-}
-
-.gap-5 {
-  gap: 1.25rem;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -2574,8 +2575,12 @@ select {
   vertical-align: super;
 }
 
-.font-\[\"Anton\"\] {
-  font-family: "Anton";
+.font-anton {
+  font-family: Anton, sans-serif;
+}
+
+.font-manrope {
+  font-family: Manrope, sans-serif;
 }
 
 .text-2xl {
@@ -2593,11 +2598,6 @@ select {
   line-height: 1.75rem;
 }
 
-.text-xl {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
-
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
@@ -2605,6 +2605,10 @@ select {
 
 .font-bold {
   font-weight: 700;
+}
+
+.font-medium {
+  font-weight: 500;
 }
 
 .uppercase {
@@ -3060,11 +3064,35 @@ select {
   forced-color-adjust: none;
 }
 
-/* @layer base {
-    html {
-      font-family: "Proxima Nova", system-ui, sans-serif;
-    }
-  } */
+@font-face {
+  font-family: 'Anton';
+
+  src: url('../css/fonts/Anton-Regular.ttf') format("trueType");
+}
+
+@font-face {
+  font-family: 'Manrope';
+
+  font-weight: 400;
+
+  src: url('../css/fonts/Manrope-Regular.ttf') format("trueType");
+}
+
+@font-face {
+  font-family: 'Manrope';
+
+  font-weight: 500;
+
+  src: url('../css/fonts/Manrope-Medium.ttf') format("trueType");
+}
+
+@font-face {
+  font-family: 'Manrope';
+
+  font-weight: 700;
+
+  src: url('../css/fonts/Manrope-Bold.ttf') format("trueType");
+}
 
 /* Custom styles */
 
