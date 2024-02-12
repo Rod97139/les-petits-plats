@@ -1,4 +1,6 @@
-export const recipesTemplate = (recipesData) => {
+import { compareAndAddRecipesArg } from "../utils/options.js";
+
+export const recipesTemplate = (recipesData, App) => {
     const { image, time,  name, description, ingredients } = recipesData;
     const getRecipesCardDOM = () => {
 
@@ -25,6 +27,8 @@ export const recipesTemplate = (recipesData) => {
         descriptionContent.textContent = description;
         ingredientsTitle.textContent = "INGREDIENTS";
         ingredients.forEach(ingredient => {
+
+            compareAndAddRecipesArg('ingredient', ingredient.ingredient, App);
 
             const ingredientDOM = document.createElement( 'ul' );
                 const name = document.createElement( 'li' );
@@ -80,4 +84,48 @@ export const recipesTemplate = (recipesData) => {
         return (article);
     }
     return { image, time,  name, description, ingredients, getRecipesCardDOM }
+}
+
+export const optionsTemplate = (type, App) => {
+
+    let myArray = []
+    let $container = null
+
+    switch (type) {
+        case 'ingredients':
+             myArray = App.options.ingredients
+             $container = document.querySelector('.select-search-ingredients')
+            break;
+        case 'appliances':
+             myArray = App.options.appliances
+             $container = document.querySelector('.select-search-appliances')
+            break;
+        case 'ustensils':
+             myArray = App.options.ustensils
+             $container = document.querySelector('.select-search-ustensils')
+            break;
+        default:
+            break;
+    }
+
+    const setOptionInputDOM = async () => {
+        myArray.forEach(option => {
+            const optionLi = document.createElement( 'li' );
+                const optionLabel = document.createElement( 'label' );
+                    const optionInput = document.createElement( 'input' );
+                    const optionSpan = document.createElement( 'span' );
+
+            optionSpan.textContent = option;
+            optionInput.setAttribute("type", "checkbox");
+
+            optionLabel.appendChild(optionInput);
+            optionLabel.appendChild(optionSpan);
+            optionLi.appendChild(optionLabel);
+            $container.appendChild(optionLi);
+        });
+
+    }
+
+    return { myArray, $container, setOptionInputDOM }
+
 }
