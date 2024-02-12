@@ -13,7 +13,7 @@ export const optionsTemplate = (type, App) => {
                 const optionLabel = document.createElement( 'label' );
                     const optionInput = document.createElement( 'input' );
                     
-            optionLabel.setAttribute("for", `${newType + i}`);
+            optionLabel.setAttribute("for", `${newType}-${i}`);
             optionLabel.classList.add('hidden');
             // // optionLabel.setAttribute("tabindex", `${i}`);
             // optionLabel.setAttribute("role", `button`);
@@ -24,6 +24,7 @@ export const optionsTemplate = (type, App) => {
             optionButton.textContent = option;
             optionButton.classList.add('hover:bg-yellow-300', 'rounded-full', 'px-3', 'py-1', 'm-1', 'text-sm', 'label-search');
             optionButton.type = "button";
+            optionButton.dataset.checkboxId = `${newType}-${i}`;
             optionInput.type = "checkbox";
             optionInput.setAttribute("name", `${type}[]`);
             optionInput.setAttribute("id", `${newType}-${i}`);

@@ -28,7 +28,9 @@ export const recipesTemplate = (recipesData, App) => {
         ingredientsTitle.textContent = "INGREDIENTS";
 
         //création de la grille ds ingredients
-        ingredients.forEach(ingredient => {
+        recipesData.ingredients.forEach(ingredient => {
+
+            ingredient.ingredient = ingredient.ingredient.toLowerCase()
 
             compareAndAddRecipesArg('ingredients', ingredient.ingredient, App);
 
