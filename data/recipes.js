@@ -560,7 +560,7 @@ export const recipes = [
     },
     {
         "id": 16,
-        "image": "Recette16.jpg",
+        "image": "Recette48.jpg",
         "name": "Gratin de pâtes à la tomate",
         "servings": 2,
         "ingredients": [
@@ -1494,7 +1494,7 @@ export const recipes = [
     },
     {
         "id": 43,
-        "image": "Recette43.jpg",
+        "image": "Recette46.jpg",
         "name": "Tarte au citron",
         "servings": 6,
         "ingredients": [
@@ -1565,7 +1565,7 @@ export const recipes = [
     },
     {
         "id": 45,
-        "image": "Recette45.jpg",
+        "image": "Recette49.jpg",
         "name": "Crème pâtissière",
         "servings": 8,
         "ingredients": [
@@ -1596,7 +1596,7 @@ export const recipes = [
     },
     {
         "id": 46,
-        "image": "Recette46.jpg",
+        "image": "Recette43.jpg",
         "name": "Far breton",
         "servings": 6,
         "ingredients": [
@@ -1669,7 +1669,7 @@ export const recipes = [
     },
     {
         "id": 48,
-        "image": "Recette48.jpg",
+        "image": "Recette16.jpg",
         "name": "Pizza",
         "servings": 4,
         "ingredients": [
@@ -1705,7 +1705,7 @@ export const recipes = [
     },
     {
         "id": 49,
-        "image": "Recette49.jpg",
+        "image": "Recette45.jpg",
         "name": "Smoothie tropical",
         "servings": 4,
         "ingredients": [

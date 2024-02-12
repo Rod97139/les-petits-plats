@@ -1,26 +1,18 @@
-export const formListener = () => {
-    const FiltersForm = document.querySelector("#filters")
+import { searchRecipes } from "./search.js"
 
-    console.log(document.querySelectorAll("#filters input"));
-    document.querySelectorAll("#filters .label-search").forEach(input => {
-        input.addEventListener("click", () => {
-            // on intercepte les clics
-            // on récupère les datas
-            console.log("change")
-            const Form = new FormData(FiltersForm)
-    
-            // on fabrique l'url
-            const Params = new URLSearchParams()
-            
-            Form.forEach((value, key) => {
-                if (value != '') {
-                    Params.append(key, value)
-                }
-                
-            })
+export const checkBoxFormListener = (App) => {
+    // const FiltersForm = document.querySelector("#filters")
+    document.querySelectorAll("#filters .label-search").forEach(button => {
+        button.addEventListener("click", () => {
+            const input = document.getElementById(button.dataset.checkboxId)
+            App.recipes = searchRecipes('', input.value, App)
+        //    console.log("recipes objects", App.recipes, searchRecipes('', input.value, App))
 
-            console.log(Params);
+        //delete the dom elements
+        App.$recipesWrapper.innerHTML = ""
+        //display the new recipes
+        App.displayAllRecipes(App.recipes)
+
         })
     })
 }
-   
