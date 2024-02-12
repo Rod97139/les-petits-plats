@@ -22,15 +22,18 @@ export const optionsTemplate = (type, App) => {
             optionLabel.textContent = option;
             // tabindex="0" role="button" aria-pressed="false" aria-labelledby="checkbox-label-1"
             optionButton.textContent = option;
+            optionButton.classList.add('hover:bg-yellow-300', 'rounded-full', 'px-3', 'py-1', 'm-1', 'text-sm', 'label-search');
             optionButton.type = "button";
             optionInput.type = "checkbox";
-            optionInput.setAttribute("name", `${newType + i}`);
-            optionInput.setAttribute("id", `${newType + i}`);
+            optionInput.setAttribute("name", `${type}[]`);
+            optionInput.setAttribute("id", `${newType}-${i}`);
+            optionInput.setAttribute("value", option);
+
             // optionInput.classList.add('hidden');
 
             optionButton.addEventListener('click', () => {  
                 optionInput.checked = !optionInput.checked;
-                optionInput.checked ? optionButton.classList.add('bg-blue-500') : optionButton.classList.remove('bg-blue-500');
+                optionInput.checked ? optionButton.classList.add('bg-yellow-300', 'font-bold', 'label-search-checked') : optionButton.classList.remove('bg-yellow-300', 'font-bold', 'label-search-checked');
             });
 
 

@@ -79,4 +79,8 @@
 .select-btn::after {
     content: url('../icons/dropdown-down.svg');
 }
+.label-search-checked::after {
+    content: url('../icons/closeLabel.svg');
+
+}
 

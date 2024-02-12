@@ -3,6 +3,7 @@ import { recipesTemplate } from "./templates/recipesTemplate.js"
 import { optionsTemplate } from "./templates/optionsTemplate.js"
 
 import { compareAndAddRecipesArg } from "./utils/options.js"
+import { formListener } from "./utils/forms.js"
 
 
 
@@ -35,6 +36,7 @@ class App {
 
     async main() {
         this.displayAllRecipes(this.recipes)
+        formListener()
     }
 }
 
