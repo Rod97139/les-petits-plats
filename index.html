@@ -22,40 +22,21 @@
                 <button class="form-button px-1 py-3 text-transparent text-xs btn-text-search" type="submit">Search</button>
             </form>
         </div>
-        <div class="select-search-container mx-8 my-6">
-            <form action="" method="post" class="mx-auto">
+        <div class="select-search-container mx-8 my-6 max-w-2xl">
+            <form action="" method="post" class="mx-auto flex flex-row gap-6 ">
                 <!-- ul li  -->
-                <ul class="select-search-ingredients">Ingrédients
-                    <li>
-                        <label class="button-checkbox">
-                            <input type="checkbox" id="checkbox1" />
-                            <span tabindex="0" role="button" aria-pressed="false">Button</span>
-                        </label>
-                    </li>
-                </ul>
-                <ul class="select-search-appliances">Appareils
-                    <li>
-                        <label class="button-checkbox">
-                            <input type="checkbox" id="checkbox1" />
-                            <span tabindex="0" role="button" aria-pressed="false">Button</span>
-                        </label>
-                    </li>
-                </ul>
-                <ul class="select-search-ustensils">Ustensiles
-                    <li>
-                        <label class="button-checkbox">
-                            <input type="checkbox" id="checkbox1" />
-                            <span tabindex="0" role="button" aria-pressed="false">Button</span>
-                        </label>
-                    </li>
-                </ul>
-               
-                <!-- <select class="form-input px-4 py-3 rounded" name="select-search" id="select-search2">
-                    <option value="1">Appareils</option>
-                </select>
-                <select class="form-input px-4 py-3 rounded" name="select-search" id="select-search3">
-                    <option value="1">Ustensiles</option>
-                </select> -->
+                <div class="bg-white basis-1/3 p-6 rounded-xl">
+                    <button class="select-btn" type="button">Ingredients</button>
+                    <ul class="select-search-ingredients max-h-80 overflow-y-scroll no-scrollbar "></ul>
+                </div>
+                <div class="bg-white basis-1/3 p-6 rounded-xl">
+                    <button class="select-btn" type="button">Appareils</button>
+                    <ul class="select-search-appliances max-h-80 overflow-y-scroll no-scrollbar"></ul>
+                </div>
+                <div class="bg-white basis-1/3 p-6 rounded-xl">
+                    <button class="select-btn" type="button">Ustensiles</button>
+                    <ul class="select-search-ustensils max-h-80 overflow-y-scroll no-scrollbar"></ul>
+                </div>
                 <button class="form-button px-1 py-3 text-transparent text-xs btn-select-search" type="submit">Search</button>
             </form>
 

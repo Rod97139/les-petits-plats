@@ -3,6 +3,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+        display: none;
+    }
+   /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;  /* Firefox */
+  }
+}
+
 
 @font-face {
     font-family: 'Anton';
@@ -62,5 +74,9 @@
     background-image: url('../images/bg.png');
     background-size: cover;
     height: 667px;
+}
+
+.select-btn::after {
+    content: url('../icons/dropdown-down.svg');
 }
 

@@ -1,5 +1,7 @@
 import { recipes } from "../../data/recipes.js"
-import { optionsTemplate, recipesTemplate } from "./templates/recipesTemplate.js"
+import { recipesTemplate } from "./templates/recipesTemplate.js"
+import { optionsTemplate } from "./templates/optionsTemplate.js"
+
 import { compareAndAddRecipesArg } from "./utils/options.js"
 
 
@@ -9,35 +11,30 @@ class App {
     constructor() {
         this.recipes = recipes
         this.options = {
-            ingredients: [],
-            appliances: [],
-            ustensils: []
+            'ingredients': [],
+            'appliances': [],
+            'ustensils': []
         }
         this.$recipesWrapper = document.querySelector('.recipes-wrapper')
     }
 
-    async displayRecipes(recipes) {
+    async displayAllRecipes(recipes) {
         recipes.forEach(recipe => {
             const recipeCard = recipesTemplate(recipe, this).getRecipesCardDOM()
             this.$recipesWrapper.appendChild(recipeCard)
-            compareAndAddRecipesArg('appliance', recipe.appliance, this)
+            compareAndAddRecipesArg('appliances', recipe.appliance, this)
             recipe.ustensils.forEach(ustensil => {
-                compareAndAddRecipesArg('ustensil', ustensil, this)
+                compareAndAddRecipesArg('ustensils', ustensil, this)
             })
         })
-    }
-
-    async displayOptions() {
-        //fonctions async 
-        optionsTemplate('ingredients', this).setOptionInputDOM()
-        optionsTemplate('appliances', this).setOptionInputDOM()
-        optionsTemplate('ustensils', this).setOptionInputDOM()
-        
+        for (let i = 0; i < 3; i++) {
+            //creation des Input checkbox dans le DOM
+            optionsTemplate(Object.keys(this.options)[i], this).putOptionInputDOM()
+        }
     }
 
     async main() {
-        this.displayRecipes(this.recipes)
-        this.displayOptions()
+        this.displayAllRecipes(this.recipes)
     }
 }
 
