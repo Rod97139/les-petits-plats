@@ -74,7 +74,7 @@ export const recipesTemplate = (recipesData, App) => {
         article.classList.add('basis-1/4', 'mx-6', 'my-9', 'bg-white', 'rounded-2xl', 'shadow-lg', 'overflow-hidden', 'flex', 'flex-col', 'min-w-96' );
             cardHeader.classList.add('relative', 'basis-1/3');
                 img.classList.add('w-full', 'h-80', 'object-cover');
-                timeElement.classList.add('absolute', 'top-5', 'right-6', 'bg-yellow-300', 'px-5', 'py-1', 'rounded-2xl', 'text-black',  'shadow-lg');
+                timeElement.classList.add('absolute', 'top-5', 'right-6', 'bg-amber-300', 'px-5', 'py-1', 'rounded-2xl', 'text-black',  'shadow-lg');
             cardBody.classList.add('basis-2/3', 'flex', 'flex-col', 'p-5', 'h-full');
                 cardTitle.classList.add('text-2xl', 'my-5', 'font-anton');
                 cardContainer.classList.add('flex', 'flex-col', 'space-y-5', 'h-full', 'overflow-hidden');

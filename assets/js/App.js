@@ -3,7 +3,6 @@ import { recipesTemplate } from "./templates/recipesTemplate.js"
 import { optionsTemplate } from "./templates/optionsTemplate.js"
 
 import { compareAndAddRecipesArg } from "./utils/options.js"
-import { checkBoxFormListener } from "./utils/forms.js"
 
 
 
@@ -11,6 +10,7 @@ class App {
 
     constructor() {
         this.recipes = recipes
+        this.searchedRecipes = []
         this.options = {
             'ingredients': [],
             'appliances': [],
@@ -36,7 +36,7 @@ class App {
 
     async main() {
         this.displayAllRecipes(this.recipes)
-        checkBoxFormListener(this)
+        // checkBoxFormListener(this)
     }
 }
 
