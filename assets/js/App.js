@@ -3,6 +3,7 @@ import { recipesTemplate } from "./templates/recipesTemplate.js"
 import { optionsTemplate } from "./templates/optionsTemplate.js"
 
 import { compareAndAddRecipesArg } from "./utils/options.js"
+import { getInputSuggestions } from "./utils/search.js"
 
 
 
@@ -36,6 +37,7 @@ class App {
 
     async main() {
         this.displayAllRecipes(this.recipes)
+        getInputSuggestions(this)
         // checkBoxFormListener(this)
     }
 }
