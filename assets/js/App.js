@@ -25,6 +25,7 @@ class App {
             const recipeCard = recipesTemplate(recipe, this).getRecipesCardDOM()
             this.$recipesWrapper.appendChild(recipeCard)
             recipe.appliance = recipe.appliance.toLowerCase()
+            recipe.searchKeyWords = recipe.name + ' ' + recipe.description + ' ' + recipe.ingredients.map(ingredient => ingredient.ingredient).join(' ')
             compareAndAddRecipesArg('appliances', recipe.appliance, this)
             recipe.ustensils.forEach(ustensil => {
                 ustensil = ustensil.toLowerCase()
@@ -40,6 +41,7 @@ class App {
     async main() {
         this.displayAllRecipes(this.recipes)
         getInputSuggestions(this)
+        console.log(this.recipes, 'this.recipes');
         // checkBoxFormListener(this)
     }
 }
