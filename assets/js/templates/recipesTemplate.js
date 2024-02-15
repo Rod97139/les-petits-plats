@@ -31,7 +31,6 @@ export const recipesTemplate = (recipesData, App) => {
         recipesData.ingredients.forEach(ingredient => {
 
             ingredient.ingredient = ingredient.ingredient.toLowerCase()
-
             compareAndAddRecipesArg('ingredients', ingredient.ingredient, App);
 
             const ingredientDOM = document.createElement( 'ul' );

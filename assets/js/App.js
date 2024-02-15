@@ -3,7 +3,7 @@ import { recipesTemplate } from "./templates/recipesTemplate.js"
 import { optionsTemplate } from "./templates/optionsTemplate.js"
 
 import { compareAndAddRecipesArg } from "./utils/options.js"
-import { getInputSuggestions } from "./utils/search.js"
+import { getInputSuggestions } from "./utils/suggestions.js"
 
 
 
@@ -24,8 +24,10 @@ class App {
         recipes.forEach(recipe => {
             const recipeCard = recipesTemplate(recipe, this).getRecipesCardDOM()
             this.$recipesWrapper.appendChild(recipeCard)
+            recipe.appliance = recipe.appliance.toLowerCase()
             compareAndAddRecipesArg('appliances', recipe.appliance, this)
             recipe.ustensils.forEach(ustensil => {
+                ustensil = ustensil.toLowerCase()
                 compareAndAddRecipesArg('ustensils', ustensil, this)
             })
         })

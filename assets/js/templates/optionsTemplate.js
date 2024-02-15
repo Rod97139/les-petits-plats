@@ -1,4 +1,4 @@
-import { searchRecipes } from "../utils/search.js";
+import { searchRecipesBy } from "../utils/search.js";
 
 export const optionsTemplate = (type, App) => {
     const myArray = App.options[type]
@@ -39,7 +39,7 @@ export const optionsTemplate = (type, App) => {
                 optionInput.checked ? optionButton.classList.add('bg-amber-300', 'font-bold', 'label-search-checked') : optionButton.classList.remove('bg-amber-300', 'font-bold', 'label-search-checked');
 
                 if (optionInput.checked) {
-                    App.searchedRecipes = searchRecipes('', optionInput.value, App)
+                    App.searchedRecipes = searchRecipesBy(type, optionInput.value, App)
                     App.$recipesWrapper.innerHTML = ""
                     App.displayAllRecipes(App.searchedRecipes)
                     
