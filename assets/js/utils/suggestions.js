@@ -4,18 +4,24 @@ export const getInputSuggestions = (App) => {
     const input = document.querySelector("#text-search-form input")
     input.addEventListener("keyup", () => {
         let isTagEnabled = false
-        console.log("input change", input.value)
-        console.log(App.selectedButtons, 'App.selectedButtons');
         App.searchedRecipes = App.recipes
         for (let i = 0; i < 3; i++) {
             App.selectedButtons[Object.keys(App.options)[i]].forEach(button => {
                 isTagEnabled = true
                 searchRecipesBy(Object.keys(App.options)[i], button, App)
-                console.log(Object.keys(App.options)[i].length, 'Object.keys(App.options)[i].length');
             })
         }
+
+        // Object.keys(App.selectedButtons).forEach(buttonArray => {
+        //             buttonArray.forEach(button => {
+        //                 isTagEnabled = true
+        //                 searchRecipesBy(Object.keys(buttonArray), button, App)
+        //            })
+        //        })
+
+
         App.searchedRecipes = isTagEnabled ? App.searchedRecipes : App.recipes
-        console.log(App.searchedRecipes, 'App.searchedRecipes');
+
         App.searchedRecipes = App.searchedRecipes.filter(recipe => recipe.searchKeyWords.toLowerCase().includes(input.value.toLowerCase()))
         
         
@@ -27,7 +33,7 @@ export const getInputSuggestions = (App) => {
                         'appliances': [],
                         'ustensils': []
                     }
-                    
+
                     App.displayAllRecipes(App.searchedRecipes)
                     App.$totalRecipes.textContent = App.searchedRecipes.length
                     App.searchedRecipes.length === 1 ? document.querySelector('.total-recipes + span').textContent = 'recette' : document.querySelector('.total-recipes + span').textContent = 'recettes' 
@@ -46,7 +52,6 @@ export const getInputSuggestions = (App) => {
                 App.selectedButtons[Object.keys(App.options)[i]].forEach(button => {
                     isTagEnabled = true
                     searchRecipesBy(Object.keys(App.options)[i], button, App)
-                    console.log(Object.keys(App.options)[i].length, 'Object.keys(App.options)[i].length');
                 })
             }
 

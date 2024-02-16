@@ -7,6 +7,7 @@ export const optionsTemplate = (type, App) => {
     const tagSearchInput = document.createElement('input')
     $container.appendChild(tagSearchInput);
     tagSearchInput.setAttribute("type", "search");
+    tagSearchInput.classList.add('w-full', 'p-2', 'rounded', 'border', 'border-gray-300', 'mb-2', 'text-sm', 'focus:outline-none', 'focus:border-gray-600', 'placeholder-gray-500');
     tagSearchInput.setAttribute("id", `tag-search-${type}`);
     tagSearchInput.addEventListener('keyup', (e) => {
         const input = e.target.value.toLowerCase()
@@ -88,12 +89,11 @@ export const optionsTemplate = (type, App) => {
                     App.$totalRecipes.textContent = App.recipes.length
                     const textInput = document.querySelector("#text-search-form input")
                     if (textInput.value != '') {
-                        App.options = {
+                        App.options =  {
                             'ingredients': [],
                             'appliances': [],
                             'ustensils': []
                         }
-                        console.log(textInput.value, 'textInput.value');
                         App.searchedRecipes = App.recipes.filter(recipe => recipe.searchKeyWords.toLowerCase().includes(textInput.value.toLowerCase()))
                         App.$recipesWrapper.innerHTML = ""
                         App.displayAllRecipes(App.searchedRecipes)

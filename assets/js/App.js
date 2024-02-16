@@ -4,12 +4,14 @@ import { optionsTemplate } from "./templates/optionsTemplate.js"
 
 import { compareAndAddRecipesArg } from "./utils/options.js"
 import { getInputSuggestions } from "./utils/suggestions.js"
+import { dropdown } from "./utils/dropdown.js"
 
 
 
 class App {
 
     constructor() {
+        // this.newTagArray = 
         this.recipes = recipes
         this.searchedRecipes = []
         this.options = {
@@ -42,6 +44,7 @@ class App {
         for (let i = 0; i < 3; i++) {
             //creation des Input checkbox dans le DOM
             optionsTemplate(Object.keys(this.options)[i], this).putOptionInputDOM()
+
         }
     }
 
@@ -62,7 +65,8 @@ class App {
         })
         this.displayAllRecipes(this.recipes)
         getInputSuggestions(this)
-        console.log(this.recipes, 'this.recipes');
+        dropdown(this)
+        
         // checkBoxFormListener(this)
     }
 }
