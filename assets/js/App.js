@@ -53,6 +53,13 @@ class App {
                     this.$suggestions.innerHTML = ""
                 }
         });
+
+        const forms = document.querySelectorAll('form')
+        forms.forEach(form => {
+            form.addEventListener('submit', (event) => {
+                event.preventDefault()
+            })
+        })
         this.displayAllRecipes(this.recipes)
         getInputSuggestions(this)
         console.log(this.recipes, 'this.recipes');
