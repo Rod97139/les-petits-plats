@@ -4,6 +4,25 @@ export const optionsTemplate = (type, App) => {
     const myArray = App.options[type]
     const $container = document.querySelector(`.select-search-${type}`)
     $container.innerHTML = ""
+    const tagSearchInput = document.createElement('input')
+    $container.appendChild(tagSearchInput);
+    tagSearchInput.setAttribute("type", "search");
+    tagSearchInput.setAttribute("id", `tag-search-${type}`);
+    tagSearchInput.addEventListener('keyup', (e) => {
+        const input = e.target.value.toLowerCase()
+        const optionsButtons = $container.querySelectorAll('button')
+        optionsButtons.forEach(button => {
+            if (button.textContent.toLowerCase().includes(input)) {
+                button.classList.remove('hidden')
+            } else {
+                button.classList.add('hidden')
+            }
+        })
+    })
+    
+
+
+
     const putOptionInputDOM = async () => {
         let i = 0;
         const newType = type.substring(0, type.length - 1);
@@ -38,7 +57,6 @@ export const optionsTemplate = (type, App) => {
 
             
             optionButton.addEventListener('click', () => {  
-                const FiltersForm = document.querySelector("#filters")
                 optionInput.checked = !optionInput.checked;
                 optionInput.checked ? optionButton.classList.add('bg-amber-300', 'font-bold', 'label-search-checked') : optionButton.classList.remove('bg-amber-300', 'font-bold', 'label-search-checked');
                 if (optionInput.checked) {
@@ -67,6 +85,7 @@ export const optionsTemplate = (type, App) => {
                     App.$recipesWrapper.innerHTML = ""
                     App.displayAllRecipes(App.recipes)
                     App.searchedRecipes = App.recipes
+                    App.$totalRecipes.textContent = App.recipes.length
                     const textInput = document.querySelector("#text-search-form input")
                     if (textInput.value != '') {
                         App.options = {
@@ -78,19 +97,18 @@ export const optionsTemplate = (type, App) => {
                         App.searchedRecipes = App.recipes.filter(recipe => recipe.searchKeyWords.toLowerCase().includes(textInput.value.toLowerCase()))
                         App.$recipesWrapper.innerHTML = ""
                         App.displayAllRecipes(App.searchedRecipes)
+                        
                     }
                     for (let i = 0; i < 3; i++) {
                         App.selectedButtons[Object.keys(App.options)[i]].forEach(button => {
                             searchRecipesBy(Object.keys(App.options)[i], button, App)
                         })
-                        
                     }
-
-                    
-
-
+                    App.$totalRecipes.textContent = App.searchedRecipes.length
+                    App.searchedRecipes.length === 1 ? document.querySelector('.total-recipes + span').textContent = 'recette' : document.querySelector('.total-recipes + span').textContent = 'recettes'
                 }
             });
+
 
 
             optionLabel.appendChild(optionInput);
@@ -99,9 +117,7 @@ export const optionsTemplate = (type, App) => {
             optionLi.appendChild(optionLabel);
             $container.appendChild(optionLi);
         });
-
     }
-
+    
     return { myArray, $container, putOptionInputDOM }
-
 }

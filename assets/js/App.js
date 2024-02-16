@@ -23,6 +23,8 @@ class App {
             'ustensils': []
         }
         this.$recipesWrapper = document.querySelector('.recipes-wrapper')
+        this.$totalRecipes = document.querySelector('.total-recipes')
+        this.$suggestions = document.querySelector('#suggestions')
     }
 
     async displayAllRecipes(recipes) {
@@ -44,6 +46,13 @@ class App {
     }
 
     async main() {
+        document.addEventListener("click", (event) => {
+                const input = document.querySelector("#text-search-form input")
+
+                if (event.target !== this.$suggestions && event.target !== input) {
+                    this.$suggestions.innerHTML = ""
+                }
+        });
         this.displayAllRecipes(this.recipes)
         getInputSuggestions(this)
         console.log(this.recipes, 'this.recipes');

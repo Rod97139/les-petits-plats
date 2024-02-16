@@ -42,6 +42,8 @@ export const searchRecipesBy = (type, value, App) => {
     }
 
     App.searchedRecipes = selectedRecipes
+    App.$totalRecipes.textContent = selectedRecipes.length
+    selectedRecipes.length === 1 ? document.querySelector('.total-recipes + span').textContent = 'recette' : document.querySelector('.total-recipes + span').textContent = 'recettes'
     App.$recipesWrapper.innerHTML = ""
     App.options = {
         'ingredients': [],
