@@ -1,4 +1,4 @@
-export const dropdown = (App) => {
+export const dropdown = () => {
 
     const types = ['ingredients', 'appliances', 'ustensils']
 
@@ -12,6 +12,7 @@ export const dropdown = (App) => {
         button.addEventListener('click', () => {
             container.classList.toggle('max-h-[4.5rem]')
             ulToDrop.classList.toggle('hidden')
+            button.classList.toggle('open')
             
         })
     })

@@ -78,9 +78,28 @@
 
 .select-btn::after {
     content: url('../icons/dropdown-down.svg');
+    position: relative;
+    left: 45px;
+    /* left: 600px; */
+}
+.select-btn.open::after {
+    content: url('../icons/dropdown-up.svg');
+    position: relative;
+    left: 45px;
 }
 .label-search-checked::after {
     content: url('../icons/closeLabel.svg');
 
 }
+
+.tag-container::before {
+    content: url('../icons/search-tag.svg');
+    position: relative;
+    top: 30px;
+    left: 115px;
+   
+    /* left: 45px; */
+}
+
+/* les input dans les ul*/
 

@@ -65,7 +65,7 @@ class App {
         })
         this.displayAllRecipes(this.recipes)
         getInputSuggestions(this)
-        dropdown(this)
+        dropdown()
         
         // checkBoxFormListener(this)
     }
