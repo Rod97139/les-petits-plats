@@ -4,17 +4,9 @@ export const optionsTemplate = (type, App) => {
     const myArray = App.options[type]
     const $container = document.querySelector(`.select-search-${type}`)
     $container.innerHTML = ""
-    
-    // viderElement($container.id)
-    // let liArray = document.querySelectorAll(`.select-search-${type} li`)
-    // liArray && liArray.forEach(li => li.remove())
-    
-
-
     const putOptionInputDOM = async () => {
         let i = 0;
         const newType = type.substring(0, type.length - 1);
-        // console.log($container.textContent, 'container');
         myArray.forEach(option => {
             i++;
             const optionLi = document.createElement( 'li' );
@@ -32,7 +24,6 @@ export const optionsTemplate = (type, App) => {
             // tabindex="0" role="button" aria-pressed="false" aria-labelledby="checkbox-label-1"
             optionButton.textContent = option;
             optionButton.classList.add('hover:bg-amber-300', 'rounded-full', 'px-3', 'py-1', 'm-1', 'text-sm', 'label-search');
-            
             optionButton.type = "button";
             optionButton.dataset.checkboxId = `${newType}-${i}`;
             optionInput.type = "checkbox";
@@ -40,38 +31,64 @@ export const optionsTemplate = (type, App) => {
             optionInput.setAttribute("id", `${newType}-${i}`);
             optionInput.setAttribute("value", option);
 
-            // optionInput.classList.add('hidden');
-
-            if (App.selectedButtons.includes(optionButton.dataset.checkboxId)) {
+            if (App.selectedButtons[type].includes(optionButton.textContent.toLocaleLowerCase())) {
                 optionButton.classList.add('bg-amber-300', 'font-bold', 'label-search-checked');
                 optionInput.checked = true;
             }
 
+            
             optionButton.addEventListener('click', () => {  
+                const FiltersForm = document.querySelector("#filters")
                 optionInput.checked = !optionInput.checked;
                 optionInput.checked ? optionButton.classList.add('bg-amber-300', 'font-bold', 'label-search-checked') : optionButton.classList.remove('bg-amber-300', 'font-bold', 'label-search-checked');
-
                 if (optionInput.checked) {
-                    App.selectedButtons.push(optionButton.dataset.checkboxId)
-                    
-                    App.searchedRecipes = searchRecipesBy(type, optionInput.value, App)
-                    App.$recipesWrapper.innerHTML = ""
-                    App.options = {
-                        'ingredients': [],
-                        'appliances': [],
-                        'ustensils': []
-                    }
-
-                    App.displayAllRecipes(App.searchedRecipes)
-                    
+                    App.selectedButtons[type].push(optionButton.textContent.toLocaleLowerCase())
+                    searchRecipesBy(type, optionInput.value, App)
                 } else {
-                    App.selectedButtons = App.selectedButtons.filter(button => button !== optionButton.dataset.checkboxId)
+
+                    // FormData
+                    // const Form = new FormData(FiltersForm)
+                    // const Params = new URLSearchParams(Form)
+                    // let ParamsArray = []
+                    // for (let i = 0; i < 3; i++) {
+                    //     const type = Object.keys(App.options)[i]
+                    //     ParamsArray[Object.keys(App.options)[i]] = Params.getAll(Object.keys(App.options)[i] + '[]')                        
+                    //     console.log(ParamsArray[Object.keys(App.options)[i]], 'ParamsArray[Object.keys(App.options)[i]]');
+                    //     const ul = document.querySelector(`.select-search-${type}`)
+                    //     const optionsButtons = ul.querySelectorAll('button')
+                    //     optionsButtons.forEach(button => {
+                    //         if (ParamsArray[type].includes(button.textContent.toLocaleLowerCase())) {
+                    //             button.classList.add('bg-amber-300', 'font-bold', 'label-search-checked')
+                    //         }
+                    //     })
+                    // }
+                    App.selectedButtons[type] = App.selectedButtons[type].filter(button => button !== optionButton.textContent.toLocaleLowerCase())
+                    console.table(App.selectedButtons);
                     App.$recipesWrapper.innerHTML = ""
                     App.displayAllRecipes(App.recipes)
-                    // App.selectedButtons.forEach(button => {
-                    //     const input = document.querySelector(`input#${button}`)
-                    //     input.checked = true;
-                    // }
+                    App.searchedRecipes = App.recipes
+                    const textInput = document.querySelector("#text-search-form input")
+                    if (textInput.value != '') {
+                        App.options = {
+                            'ingredients': [],
+                            'appliances': [],
+                            'ustensils': []
+                        }
+                        console.log(textInput.value, 'textInput.value');
+                        App.searchedRecipes = App.recipes.filter(recipe => recipe.searchKeyWords.toLowerCase().includes(textInput.value.toLowerCase()))
+                        App.$recipesWrapper.innerHTML = ""
+                        App.displayAllRecipes(App.searchedRecipes)
+                    }
+                    for (let i = 0; i < 3; i++) {
+                        App.selectedButtons[Object.keys(App.options)[i]].forEach(button => {
+                            searchRecipesBy(Object.keys(App.options)[i], button, App)
+                        })
+                        
+                    }
+
+                    
+
+
                 }
             });
 

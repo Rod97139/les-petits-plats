@@ -38,12 +38,16 @@ export const searchRecipesBy = (type, value, App) => {
             selectedRecipes = searchRecipesByUstensils(type, value, App)
             break;
         default:
-            // selectedRecipes = App.recipes
              console.log('probleme dans la recherche');
     }
 
-    console.log("selectedRecipes", selectedRecipes);
-    console.log(App.searchedRecipes, 'App.searchedRecipes');
-    console.log(App.recipes, 'App.recipes');
+    App.searchedRecipes = selectedRecipes
+    App.$recipesWrapper.innerHTML = ""
+    App.options = {
+        'ingredients': [],
+        'appliances': [],
+        'ustensils': []
+    }
+    App.displayAllRecipes(App.searchedRecipes)
     return selectedRecipes;
 }

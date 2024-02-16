@@ -17,7 +17,11 @@ class App {
             'appliances': [],
             'ustensils': []
         }
-        this.selectedButtons = []
+        this.selectedButtons = {
+            'ingredients': [],
+            'appliances': [],
+            'ustensils': []
+        }
         this.$recipesWrapper = document.querySelector('.recipes-wrapper')
     }
 

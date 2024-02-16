@@ -4,7 +4,7 @@ export const getInputSuggestions = (App) => {
     const input = document.querySelector("#text-search-form input")
     input.addEventListener("keyup", () => {
         console.log("input change", input.value)
-        const result = App.recipes.filter(recipe => recipe.searchKeyWords.toLowerCase().includes(input.value.toLowerCase()))
+        App.searchedRecipes = App.recipes.filter(recipe => recipe.searchKeyWords.toLowerCase().includes(input.value.toLowerCase()))
         
         
         let suggestion = '';
@@ -16,9 +16,9 @@ export const getInputSuggestions = (App) => {
                         'ustensils': []
                     }
                     
-                    App.displayAllRecipes(result)
+                    App.displayAllRecipes(App.searchedRecipes)
                     
-                    result.forEach(recipe => {
+                    App.searchedRecipes.forEach(recipe => {
                 suggestion += `<div class="suggestion w-wull hover:bg-slate-500 flex flex-row">
                                     <p>${recipe.name}</p>
                                 </div>`
