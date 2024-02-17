@@ -6,6 +6,8 @@ export const optionsTemplate = (type, App) => {
     $container.innerHTML = ""
     const tagSearchInput = document.createElement('input')
     $container.appendChild(tagSearchInput);
+    const $labelSearchContainerByType = document.querySelector(`.label-search-${type}`)
+    $labelSearchContainerByType.innerHTML = ""
     tagSearchInput.setAttribute("type", "search");
     tagSearchInput.classList.add('mx-1','w-[180px]', 'p-2', 'rounded', 'border', 'border-gray-300', 'mb-2', 'text-sm', 'focus:outline-none', 'focus:border-gray-600', 'placeholder-gray-500');
     tagSearchInput.setAttribute("id", `tag-search-${type}`);
@@ -54,6 +56,13 @@ export const optionsTemplate = (type, App) => {
             if (App.selectedButtons[type].includes(optionButton.textContent.toLocaleLowerCase())) {
                 optionButton.classList.add('bg-amber-300', 'font-bold', 'label-search-checked');
                 optionInput.checked = true;
+                const newLabelbutton = optionButton.cloneNode(true)
+                $labelSearchContainerByType.appendChild(newLabelbutton)
+
+                console.log(newLabelbutton.className);
+                newLabelbutton.classList.remove('label-search-checked')
+                newLabelbutton.classList.add('label-tag-checked', 'rounded-xl', 'h-[40px]')
+                console.log(newLabelbutton.className);
             }
 
             

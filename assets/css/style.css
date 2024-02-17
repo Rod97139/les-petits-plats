@@ -95,6 +95,12 @@
     top: 3px;
     float: right;
 }
+.label-tag-checked::after {
+    content: url('../icons/close-tag.svg');
+    position: relative;
+    top: 3px;
+    float: right;
+}
 
 .tag-container::before {
     content: url('../icons/search-tag.svg');

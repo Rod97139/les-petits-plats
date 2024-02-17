@@ -1150,6 +1150,10 @@ select {
   margin-left: 0.5rem;
 }
 
+.ml-8 {
+  margin-left: 2rem;
+}
+
 .mt-0 {
   margin-top: 0px;
 }
@@ -1289,6 +1293,22 @@ select {
   height: 100%;
 }
 
+.h-\[\] {
+  height: ;
+}
+
+.h-\[4p\] {
+  height: 4p;
+}
+
+.h-\[4px\] {
+  height: 4px;
+}
+
+.h-\[40px\] {
+  height: 40px;
+}
+
 .max-h-72 {
   max-height: 18rem;
 }
@@ -1318,6 +1338,10 @@ select {
   width: 180px;
 }
 
+.w-\[188px\] {
+  width: 188px;
+}
+
 .w-\[this-is\\\\\] {
   width: this-is\\;
 }
@@ -1332,6 +1356,10 @@ select {
 
 .w-full {
   width: 100%;
+}
+
+.w-2 {
+  width: 0.5rem;
 }
 
 .min-w-96 {
@@ -1930,6 +1958,12 @@ select {
   margin-bottom: calc(1.25rem * var(--tw-space-y-reverse));
 }
 
+.space-y-\[10px\] > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(10px * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(10px * var(--tw-space-y-reverse));
+}
+
 .space-y-reverse > :not([hidden]) ~ :not([hidden]) {
   --tw-space-y-reverse: 1;
 }
@@ -2250,6 +2284,10 @@ select {
 
 .rounded-xl {
   border-radius: 0.75rem;
+}
+
+.rounded-lg {
+  border-radius: 0.5rem;
 }
 
 .rounded-b {
@@ -3286,6 +3324,13 @@ select {
 
 .label-search-checked::after {
   content: url('../icons/closeLabel.svg');
+  position: relative;
+  top: 3px;
+  float: right;
+}
+
+.label-tag-checked::after {
+  content: url('../icons/close-tag.svg');
   position: relative;
   top: 3px;
   float: right;
