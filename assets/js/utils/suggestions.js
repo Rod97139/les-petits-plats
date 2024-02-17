@@ -25,7 +25,7 @@ export const getInputSuggestions = (App) => {
         App.searchedRecipes = App.searchedRecipes.filter(recipe => recipe.searchKeyWords.toLowerCase().includes(input.value.toLowerCase()))
         
         
-        let suggestion = '';
+        // let suggestion = '';
         if (input.value != '') {
                     App.$recipesWrapper.innerHTML = ""
                     App.options = {
@@ -38,11 +38,11 @@ export const getInputSuggestions = (App) => {
                     App.$totalRecipes.textContent = App.searchedRecipes.length
                     App.searchedRecipes.length === 1 ? document.querySelector('.total-recipes + span').textContent = 'recette' : document.querySelector('.total-recipes + span').textContent = 'recettes' 
                     
-                    App.searchedRecipes.forEach(recipe => {
-                suggestion += `<div class="suggestion w-wull hover:bg-slate-500 flex flex-row">
-                                    <p>${recipe.name}</p>
-                                </div>`
-            })
+            //         App.searchedRecipes.forEach(recipe => {
+            //     suggestion += `<div class="suggestion w-wull hover:bg-slate-500 flex flex-row">
+            //                         <p>${recipe.name}</p>
+            //                     </div>`
+            // })
         } else {
 
             let isTagEnabled = false
@@ -64,7 +64,7 @@ export const getInputSuggestions = (App) => {
             document.querySelector('.total-recipes + span').textContent = 'recettes'
         }
 
-        const sugg = document.querySelector("#suggestions")
-        sugg.innerHTML = suggestion
+        // const sugg = document.querySelector("#suggestions")
+        // sugg.innerHTML = suggestion
     })
 }

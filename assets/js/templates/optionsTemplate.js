@@ -7,7 +7,7 @@ export const optionsTemplate = (type, App) => {
     const tagSearchInput = document.createElement('input')
     $container.appendChild(tagSearchInput);
     tagSearchInput.setAttribute("type", "search");
-    tagSearchInput.classList.add('w-full', 'p-2', 'rounded', 'border', 'border-gray-300', 'mb-2', 'text-sm', 'focus:outline-none', 'focus:border-gray-600', 'placeholder-gray-500');
+    tagSearchInput.classList.add('mx-1','w-[180px]', 'p-2', 'rounded', 'border', 'border-gray-300', 'mb-2', 'text-sm', 'focus:outline-none', 'focus:border-gray-600', 'placeholder-gray-500');
     tagSearchInput.setAttribute("id", `tag-search-${type}`);
     tagSearchInput.addEventListener('keyup', (e) => {
         const input = e.target.value.toLowerCase()
@@ -43,7 +43,7 @@ export const optionsTemplate = (type, App) => {
             optionLabel.textContent = option;
             // tabindex="0" role="button" aria-pressed="false" aria-labelledby="checkbox-label-1"
             optionButton.textContent = option;
-            optionButton.classList.add('hover:bg-amber-300', 'rounded-full', 'px-3', 'py-1', 'm-1', 'text-sm', 'label-search');
+            optionButton.classList.add('hover:bg-amber-300', 'px-3', 'py-1', 'text-sm', 'label-search', 'w-full', 'text-left');
             optionButton.type = "button";
             optionButton.dataset.checkboxId = `${newType}-${i}`;
             optionInput.type = "checkbox";

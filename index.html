@@ -20,22 +20,22 @@
                 <input class="input-text-search form-input  h-24 px-4 py-3 rounded" placeholder="Rechercher une recette, un ingrédient, ..." id="text" name="text" type="search">
                 <label class="hidden" for="text">Text search</label>
                 <button class="form-button px-1 py-3 text-transparent text-xs btn-text-search" type="submit">Search</button>
-                <div id="suggestions" class="text-white bg-black z-[100] justify-self-start w-[1050px]"></div>
+                <!-- <div id="suggestions" class="text-white bg-black z-[100] justify-self-start w-[1050px]"></div> -->
             </form>
         </div>
         <div class="select-search-container mx-8 my-6 flex flex-row justify-between w-full">
             <form id="filters" action="" method="post" class="flex flex-row gap-6 max-w-2xl  ">
                 <!-- ul li  -->
-                <div class="bg-white w-48 p-6 rounded-xl max-h-[4.5rem]">
-                    <button class="select-btn w-full text-left" type="button">Ingredients</button>
+                <div class="bg-white w-48 rounded-xl min-h-[4.5rem] max-h-[4.5rem] overflow-hidden min-w-[188px]">
+                    <button class="select-btn  mt-6 mx-4 w-full text-left" type="button">Ingredients</button>
                     <ul class="tag-container hidden w-full select-search-ingredients max-h-72 overflow-x-scroll no-scrollbar mx-auto text-left "></ul>
                 </div>
-                <div class="bg-white w-48 p-6 rounded-xl max-h-[4.5rem]">
-                    <button class="select-btn w-full text-left" type="button">Appareils</button>
+                <div class="bg-white w-48 rounded-xl min-h-[4.5rem] max-h-[4.5rem] overflow-hidden min-w-[188px]">
+                    <button class="select-btn  mt-6 mx-4 w-full text-left" type="button">Appareils</button>
                     <ul class="tag-container hidden w-full select-search-appliances max-h-72 overflow-x-scroll no-scrollbar "></ul>
                 </div>
-                <div class="bg-white w-48 p-6 rounded-xl max-h-[4.5rem]">
-                    <button class="select-btn w-full text-left" type="button">Ustensiles</button>
+                <div class="bg-white w-48 rounded-xl min-h-[4.5rem] max-h-[4.5rem] overflow-hidden min-w-[188px]">
+                    <button class="select-btn  mt-6 mx-4 w-full text-left" type="button">Ustensiles</button>
                     <ul class="tag-container hidden w-full select-search-ustensils max-h-72 overflow-x-scroll no-scrollbar "></ul>
                 </div>
                 <button class="form-button px-1 py-3 text-transparent text-xs btn-select-search" type="submit">Search</button>
@@ -43,7 +43,11 @@
             <div>
                 <p class="gap-6 mx-[200px] font-anton text-xl"><span class="mx-1 total-recipes">50</span><span>recettes</span></p>
             </div>
-
+        </div>
+        <div class="label-search-container">
+            <div class="label-search-ingredients" ></div>
+            <div class="label-search-appliances"></div>
+            <div class="label-search-ustensils" ></div>
         </div>
         
 

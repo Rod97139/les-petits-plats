@@ -26,7 +26,6 @@ class App {
         }
         this.$recipesWrapper = document.querySelector('.recipes-wrapper')
         this.$totalRecipes = document.querySelector('.total-recipes')
-        this.$suggestions = document.querySelector('#suggestions')
     }
 
     async displayAllRecipes(recipes) {
@@ -49,13 +48,13 @@ class App {
     }
 
     async main() {
-        document.addEventListener("click", (event) => {
-                const input = document.querySelector("#text-search-form input")
+        // document.addEventListener("click", (event) => {
+        //         const input = document.querySelector("#text-search-form input")
 
-                if (event.target !== this.$suggestions && event.target !== input) {
-                    this.$suggestions.innerHTML = ""
-                }
-        });
+        //         if (event.target !== this.$suggestions && event.target !== input) {
+        //             this.$suggestions.innerHTML = ""
+        //         }
+        // });
 
         const forms = document.querySelectorAll('form')
         forms.forEach(form => {

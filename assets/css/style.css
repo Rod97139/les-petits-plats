@@ -65,9 +65,11 @@
 
 .btn-text-search::after {
     content: url('../icons/searchCTA.svg');
+    margin: 7px;
 }
 .btn-text-search:hover::after {
     content: url('../icons/searchCTAv2.svg');
+    margin: 7px;
 }
 
 .text-search-container {
@@ -89,14 +91,16 @@
 }
 .label-search-checked::after {
     content: url('../icons/closeLabel.svg');
-
+    position: relative;
+    top: 3px;
+    float: right;
 }
 
 .tag-container::before {
     content: url('../icons/search-tag.svg');
     position: relative;
     top: 30px;
-    left: 115px;
+    left: 160px;
    
     /* left: 45px; */
 }
