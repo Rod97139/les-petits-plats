@@ -36,6 +36,7 @@ export const optionsTemplate = (type, App) => {
                 const optionLabel = document.createElement( 'label' );
                     const optionInput = document.createElement( 'input' );
                     
+            optionLi.setAttribute('class', 'button-parent')
             optionLabel.setAttribute("for", `${newType}-${i}`);
             optionLabel.classList.add('hidden');
             // // optionLabel.setAttribute("tabindex", `${i}`);
@@ -56,13 +57,42 @@ export const optionsTemplate = (type, App) => {
             if (App.selectedButtons[type].includes(optionButton.textContent.toLocaleLowerCase())) {
                 optionButton.classList.add('bg-amber-300', 'font-bold', 'label-search-checked');
                 optionInput.checked = true;
+
                 const newLabelbutton = optionButton.cloneNode(true)
                 $labelSearchContainerByType.appendChild(newLabelbutton)
-
-                console.log(newLabelbutton.className);
                 newLabelbutton.classList.remove('label-search-checked')
                 newLabelbutton.classList.add('label-tag-checked', 'rounded-xl', 'h-[40px]')
-                console.log(newLabelbutton.className);
+                newLabelbutton.addEventListener('click', () => {
+                    optionInput.checked = !optionInput.checked;
+                    optionInput.checked ? optionButton.classList.add('bg-amber-300', 'font-bold', 'label-search-checked') : optionButton.classList.remove('bg-amber-300', 'font-bold', 'label-search-checked');
+
+                    App.selectedButtons[type] = App.selectedButtons[type].filter(button => button !== optionButton.textContent.toLocaleLowerCase())
+                    console.table(App.selectedButtons);
+                    App.$recipesWrapper.innerHTML = ""
+                    App.displayAllRecipes(App.recipes)
+                    App.searchedRecipes = App.recipes
+                    App.$totalRecipes.textContent = App.recipes.length
+                    const textInput = document.querySelector("#text-search-form input")
+                    if (textInput.value != '') {
+                        App.options =  {
+                            'ingredients': [],
+                            'appliances': [],
+                            'ustensils': []
+                        }
+                        App.searchedRecipes = App.recipes.filter(recipe => recipe.searchKeyWords.toLowerCase().includes(textInput.value.toLowerCase()))
+                        App.$recipesWrapper.innerHTML = ""
+                        App.displayAllRecipes(App.searchedRecipes)
+                        
+                    }
+                    for (let i = 0; i < 3; i++) {
+                        App.selectedButtons[Object.keys(App.options)[i]].forEach(button => {
+                            searchRecipesBy(Object.keys(App.options)[i], button, App)
+                        })
+                    }
+                    App.$totalRecipes.textContent = App.searchedRecipes.length
+                    App.searchedRecipes.length === 1 ? document.querySelector('.total-recipes + span').textContent = 'recette' : document.querySelector('.total-recipes + span').textContent = 'recettes'
+
+                })
             }
 
             

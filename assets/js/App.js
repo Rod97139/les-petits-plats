@@ -48,13 +48,25 @@ class App {
     }
 
     async main() {
-        // document.addEventListener("click", (event) => {
-        //         const input = document.querySelector("#text-search-form input")
+        document.addEventListener("click", (event) => {
+                const formCheckbox = document.querySelector("#filters")
+                const dropdownUls = document.querySelectorAll('#filters ul')
+                const parentTarget =  event.target.parentNode
 
-        //         if (event.target !== this.$suggestions && event.target !== input) {
-        //             this.$suggestions.innerHTML = ""
-        //         }
-        // });
+                if (!formCheckbox.contains(event.target) && (parentTarget !== null) ) {
+                    if (parentTarget.getAttribute('class') !== 'button-parent') {
+                        dropdownUls.forEach(ul => {
+                            const $container = ul.parentElement
+                            const button = $container.querySelector('button')
+                            if (!ul.classList.contains('hidden')) {
+                                ul.classList.toggle('hidden')
+                                $container.classList.toggle('max-h-[4.5rem]')
+                                button.classList.toggle('open')                            
+                            }
+                        })
+                    }
+                }
+        });
 
         const forms = document.querySelectorAll('form')
         forms.forEach(form => {

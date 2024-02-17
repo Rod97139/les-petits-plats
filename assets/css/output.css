@@ -1289,24 +1289,12 @@ select {
   height: 20rem;
 }
 
-.h-full {
-  height: 100%;
-}
-
-.h-\[\] {
-  height: ;
-}
-
-.h-\[4p\] {
-  height: 4p;
-}
-
-.h-\[4px\] {
-  height: 4px;
-}
-
 .h-\[40px\] {
   height: 40px;
+}
+
+.h-full {
+  height: 100%;
 }
 
 .max-h-72 {
@@ -1356,10 +1344,6 @@ select {
 
 .w-full {
   width: 100%;
-}
-
-.w-2 {
-  width: 0.5rem;
 }
 
 .min-w-96 {
@@ -2284,10 +2268,6 @@ select {
 
 .rounded-xl {
   border-radius: 0.75rem;
-}
-
-.rounded-lg {
-  border-radius: 0.5rem;
 }
 
 .rounded-b {
