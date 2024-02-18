@@ -6,7 +6,7 @@ export const optionsTemplate = (type, App) => {
     $container.innerHTML = ""
     const tagSearchInput = document.createElement('input')
     const deleteIcon = document.createElement('img')
-    deleteIcon.src = '../../assets/icons/close-input-small.svg'
+    deleteIcon.src = 'assets/icons/close-input-small.svg'
     deleteIcon.classList.add('relative', 'left-36', 'bottom-8', 'cursor-pointer', 'hidden')
     $container.appendChild(tagSearchInput);
     $container.appendChild(deleteIcon)
