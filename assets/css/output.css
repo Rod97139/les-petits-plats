@@ -1024,16 +1024,32 @@ select {
   inset: -0.25rem;
 }
 
+.bottom-8 {
+  bottom: 2rem;
+}
+
 .end-1 {
   inset-inline-end: 0.25rem;
+}
+
+.left-36 {
+  left: 9rem;
 }
 
 .right-6 {
   right: 1.5rem;
 }
 
+.right-\[500px\] {
+  right: 500px;
+}
+
 .top-5 {
   top: 1.25rem;
+}
+
+.top-\[472px\] {
+  top: 472px;
 }
 
 .isolate {
@@ -1448,6 +1464,10 @@ select {
 
 .transform-none {
   transform: none;
+}
+
+.cursor-pointer {
+  cursor: pointer;
 }
 
 .touch-auto {
@@ -3278,10 +3298,10 @@ select {
   margin: 7px;
 }
 
-.btn-text-search:hover::after {
-  content: url('../icons/searchCTAv2.svg');
-  margin: 7px;
-}
+/* .btn-text-search:hover::after {
+    content: url('../icons/searchCTAv2.svg');
+    margin: 7px;
+} */
 
 .text-search-container {
   background-image: url('../images/bg.png');
@@ -3319,7 +3339,7 @@ select {
 .tag-container::before {
   content: url('../icons/search-tag.svg');
   position: relative;
-  top: 30px;
+  top: 31px;
   left: 160px;
   /* left: 45px; */
 }

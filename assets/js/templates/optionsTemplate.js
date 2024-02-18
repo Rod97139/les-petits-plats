@@ -5,7 +5,11 @@ export const optionsTemplate = (type, App) => {
     const $container = document.querySelector(`.select-search-${type}`)
     $container.innerHTML = ""
     const tagSearchInput = document.createElement('input')
+    const deleteIcon = document.createElement('img')
+    deleteIcon.src = '../../assets/icons/close-input-small.svg'
+    deleteIcon.classList.add('relative', 'left-36', 'bottom-8', 'cursor-pointer', 'hidden')
     $container.appendChild(tagSearchInput);
+    $container.appendChild(deleteIcon)
     const $labelSearchContainerByType = document.querySelector(`.label-search-${type}`)
     $labelSearchContainerByType.innerHTML = ""
     tagSearchInput.setAttribute("type", "search");
@@ -14,6 +18,11 @@ export const optionsTemplate = (type, App) => {
     tagSearchInput.addEventListener('keyup', (e) => {
         const input = e.target.value.toLowerCase()
         const optionsButtons = $container.querySelectorAll('button')
+        if (input.value !== '') {
+            deleteIcon.classList.toggle('hidden', false)
+        } else {
+            deleteIcon.classList.toggle('hidden', true)
+        }
         optionsButtons.forEach(button => {
             if (button.textContent.toLowerCase().includes(input)) {
                 button.classList.remove('hidden')
@@ -22,9 +31,15 @@ export const optionsTemplate = (type, App) => {
             }
         })
     })
-    
 
-
+    deleteIcon.addEventListener('click', () => {
+        tagSearchInput.value = ''
+        deleteIcon.classList.toggle('hidden', true)
+        const optionsButtons = $container.querySelectorAll('button')
+        optionsButtons.forEach(button => {
+            button.classList.remove('hidden')
+        })
+    })
 
     const putOptionInputDOM = async () => {
         let i = 0;

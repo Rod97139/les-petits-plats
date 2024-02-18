@@ -57,20 +57,16 @@
     position: absolute;
     top: 445px;
     right: 415px;
-
-
-
-    
 }
 
 .btn-text-search::after {
     content: url('../icons/searchCTA.svg');
     margin: 7px;
 }
-.btn-text-search:hover::after {
+/* .btn-text-search:hover::after {
     content: url('../icons/searchCTAv2.svg');
     margin: 7px;
-}
+} */
 
 .text-search-container {
     background-image: url('../images/bg.png');
@@ -105,7 +101,7 @@
 .tag-container::before {
     content: url('../icons/search-tag.svg');
     position: relative;
-    top: 30px;
+    top: 31px;
     left: 160px;
    
     /* left: 45px; */

@@ -5,6 +5,7 @@ import { optionsTemplate } from "./templates/optionsTemplate.js"
 import { compareAndAddRecipesArg } from "./utils/options.js"
 import { getInputSuggestions } from "./utils/suggestions.js"
 import { dropdown } from "./utils/dropdown.js"
+import { deleteSearch } from "./utils/delete-search.js"
 
 
 
@@ -77,8 +78,7 @@ class App {
         this.displayAllRecipes(this.recipes)
         getInputSuggestions(this)
         dropdown()
-        
-        // checkBoxFormListener(this)
+        deleteSearch(this)
     }
 }
 
