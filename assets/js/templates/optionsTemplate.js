@@ -18,11 +18,6 @@ export const optionsTemplate = (type, App) => {
     tagSearchInput.addEventListener('keyup', (e) => {
         const input = e.target.value.toLowerCase()
         const optionsButtons = $container.querySelectorAll('button')
-        if (input.value !== '') {
-            deleteIcon.classList.toggle('hidden', false)
-        } else {
-            deleteIcon.classList.toggle('hidden', true)
-        }
         optionsButtons.forEach(button => {
             if (button.textContent.toLowerCase().includes(input)) {
                 button.classList.remove('hidden')
@@ -30,6 +25,14 @@ export const optionsTemplate = (type, App) => {
                 button.classList.add('hidden')
             }
         })
+    })
+
+    tagSearchInput.addEventListener('input', () => {
+        if (tagSearchInput.value !== '') {
+            deleteIcon.classList.toggle('hidden', false)
+        } else {
+            deleteIcon.classList.toggle('hidden', true)
+        }
     })
 
     deleteIcon.addEventListener('click', () => {
