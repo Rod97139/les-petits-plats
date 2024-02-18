@@ -65,7 +65,7 @@ export const optionsTemplate = (type, App) => {
             optionLabel.textContent = capitalizedOption;
             // tabindex="0" role="button" aria-pressed="false" aria-labelledby="checkbox-label-1"
             optionButton.textContent = capitalizedOption;
-            optionButton.classList.add('hover:bg-amber-300', 'px-3', 'py-2', 'my-[0.5px]', 'text-sm', 'label-search', 'w-full', 'text-left');
+            optionButton.classList.add('hover:bg-amber-300', 'px-3', 'py-2', 'my-[0.5px]', 'text-sm', 'label-search', 'w-full', 'text-left', 'h-[37.5px]', 'focus:outline-none', 'focus:ring-2', 'focus:ring-amber-300', 'focus:ring-opacity-50');
             optionButton.type = "button";
             optionButton.dataset.checkboxId = `${newType}-${i}`;
             optionInput.type = "checkbox";
@@ -79,8 +79,8 @@ export const optionsTemplate = (type, App) => {
 
                 const newLabelbutton = optionButton.cloneNode(true)
                 $labelSearchContainerByType.appendChild(newLabelbutton)
-                newLabelbutton.classList.remove('label-search-checked')
-                newLabelbutton.classList.add('label-tag-checked', 'rounded-xl', 'h-[40px]')
+                newLabelbutton.classList.remove('label-search-checked','focus:ring-amber-300')
+                newLabelbutton.classList.add('label-tag-checked', 'rounded-xl', 'h-[40px]', 'focus:ring-amber-500')
                 newLabelbutton.addEventListener('click', () => {
                     optionInput.checked = !optionInput.checked;
                     optionInput.checked ? optionButton.classList.add('bg-amber-300', 'font-bold', 'label-search-checked') : optionButton.classList.remove('bg-amber-300', 'font-bold', 'label-search-checked');

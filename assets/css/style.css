@@ -85,7 +85,13 @@
     position: relative;
     left: 45px;
 }
-.label-search-checked::after {
+.label-search-checked:hover::after {
+    content: url('../icons/closeLabel.svg');
+    position: relative;
+    top: 3px;
+    float: right;
+}
+.label-search-checked:focus::after {
     content: url('../icons/closeLabel.svg');
     position: relative;
     top: 3px;
