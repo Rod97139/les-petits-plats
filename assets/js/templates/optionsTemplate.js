@@ -61,10 +61,11 @@ export const optionsTemplate = (type, App) => {
             // optionLabel.setAttribute("role", `button`);
             // optionLabel.setAttribute("aria-pressed", `false`);
             // optionLabel.setAttribute("aria-labelledby", `${newType + i}`);
-            optionLabel.textContent = option;
+            const capitalizedOption = option.charAt(0).toUpperCase() + option.slice(1)
+            optionLabel.textContent = capitalizedOption;
             // tabindex="0" role="button" aria-pressed="false" aria-labelledby="checkbox-label-1"
-            optionButton.textContent = option;
-            optionButton.classList.add('hover:bg-amber-300', 'px-3', 'py-1', 'text-sm', 'label-search', 'w-full', 'text-left');
+            optionButton.textContent = capitalizedOption;
+            optionButton.classList.add('hover:bg-amber-300', 'px-3', 'py-2', 'my-[0.5px]', 'text-sm', 'label-search', 'w-full', 'text-left');
             optionButton.type = "button";
             optionButton.dataset.checkboxId = `${newType}-${i}`;
             optionInput.type = "checkbox";
