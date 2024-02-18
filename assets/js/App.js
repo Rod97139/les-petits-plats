@@ -27,6 +27,7 @@ class App {
         }
         this.$recipesWrapper = document.querySelector('.recipes-wrapper')
         this.$totalRecipes = document.querySelector('.total-recipes')
+        this.eventBoolean = false
     }
 
     async displayAllRecipes(recipes) {
@@ -53,6 +54,8 @@ class App {
                 const formCheckbox = document.querySelector("#filters")
                 const dropdownUls = document.querySelectorAll('#filters ul')
                 const parentTarget =  event.target.parentNode
+                const sugg = document.querySelector("#suggestions")
+                sugg.textContent = ""
 
                 if (!formCheckbox.contains(event.target) && (parentTarget !== null) ) {
                     if (parentTarget.getAttribute('class') !== 'button-parent') {

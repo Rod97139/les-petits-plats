@@ -1,3 +1,4 @@
+import { escapeHtml } from "./escapeHtml.js"
 import { searchRecipesBy } from "./search.js"
 
 export const getInputSuggestions = (App) => {
@@ -36,13 +37,24 @@ export const getInputSuggestions = (App) => {
 
                     App.displayAllRecipes(App.searchedRecipes)
                     App.$totalRecipes.textContent = App.searchedRecipes.length
-                    App.searchedRecipes.length === 1 ? document.querySelector('.total-recipes + span').textContent = 'recette' : document.querySelector('.total-recipes + span').textContent = 'recettes' 
+                    App.searchedRecipes.length === 1 ? document.querySelector('.total-recipes + span').textContent = 'recette' : document.querySelector('.total-recipes + span').textContent = 'recettes'
                     
-            //         App.searchedRecipes.forEach(recipe => {
-            //     suggestion += `<div class="suggestion w-wull hover:bg-slate-500 flex flex-row">
-            //                         <p>${recipe.name}</p>
-            //                     </div>`
-            // })
+                    if (App.searchedRecipes.length ===  0) {
+                        const criteria = escapeHtml(input.value)
+                        const suggestion = document.createElement("div")
+                        suggestion.classList.add("suggestion", "w-full", "hover:bg-slate-500", "flex", "flex-row")
+                        const suggText = document.createElement("p")
+                        suggText.textContent = `Aucune recette ne correspond à votre critère '${criteria}'  vous pouvez chercher « tarte aux pommes », « poisson », etc.`
+                        suggestion.appendChild(suggText)
+
+                        const sugg = document.querySelector("#suggestions")
+                        sugg.appendChild(suggestion)
+                    }
+                //     App.searchedRecipes.forEach(recipe => {
+                // suggestion += `<div class="suggestion w-wull hover:bg-slate-500 flex flex-row">
+                //                     <p>${recipe.name}</p>
+                //                 </div>`
+                //     })
         } else {
 
             let isTagEnabled = false
@@ -64,7 +76,7 @@ export const getInputSuggestions = (App) => {
             document.querySelector('.total-recipes + span').textContent = 'recettes'
         }
 
-        // const sugg = document.querySelector("#suggestions")
+        // const sugg = document.querySelector("#suggestions")    
         // sugg.innerHTML = suggestion
     })
 }
