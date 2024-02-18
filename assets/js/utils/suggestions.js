@@ -23,7 +23,9 @@ export const getInputSuggestions = (App) => {
 
         App.searchedRecipes = isTagEnabled ? App.searchedRecipes : App.recipes
 
+        //boucle filter
         App.searchedRecipes = App.searchedRecipes.filter(recipe => recipe.searchKeyWords.toLowerCase().includes(input.value.toLowerCase()))
+        //
         
         
         // let suggestion = '';
