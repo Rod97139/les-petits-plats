@@ -88,7 +88,29 @@
     margin-left: 10px;
     /* left: 45px; */
 }
-.label-search-checked:hover::after {
+@media screen and (min-width: 768px) {
+    .label-search-checked:hover::after {
+        content: url('../icons/closeLabel.svg');
+        position: relative;
+        top: 3px;
+        float: right;
+    }
+    .label-search-checked:focus::after {
+        content: url('../icons/closeLabel.svg');
+        position: relative;
+        top: 3px;
+        float: right;
+    }
+}
+@media screen and (max-width: 768px) {
+    .button-parent:has(.label-search-checked) {
+        background-color: #fcd34d;
+    }
+    .button-parent:hover {
+        background-color: #fcd34d;
+    }
+}
+/* .label-search-checked:hover::after {
     content: url('../icons/closeLabel.svg');
     position: relative;
     top: 3px;
@@ -99,7 +121,7 @@
     position: relative;
     top: 3px;
     float: right;
-}
+} */
 .label-tag-checked::after {
     content: url('../icons/close-tag.svg');
     position: relative;

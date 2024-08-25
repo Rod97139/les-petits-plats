@@ -1936,20 +1936,12 @@ select {
   gap: 0.5rem;
 }
 
-.gap-6 {
-  gap: 1.5rem;
-}
-
-.gap-8 {
-  gap: 2rem;
-}
-
-.gap-7 {
-  gap: 1.75rem;
-}
-
 .gap-4 {
   gap: 1rem;
+}
+
+.gap-6 {
+  gap: 1.5rem;
 }
 
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
@@ -3389,19 +3381,44 @@ select {
   /* left: 45px; */
 }
 
-.label-search-checked:hover::after {
-  content: url('../icons/closeLabel.svg');
-  position: relative;
-  top: 3px;
-  float: right;
+@media screen and (min-width: 768px) {
+  .label-search-checked:hover::after {
+    content: url('../icons/closeLabel.svg');
+    position: relative;
+    top: 3px;
+    float: right;
+  }
+
+  .label-search-checked:focus::after {
+    content: url('../icons/closeLabel.svg');
+    position: relative;
+    top: 3px;
+    float: right;
+  }
 }
 
-.label-search-checked:focus::after {
-  content: url('../icons/closeLabel.svg');
-  position: relative;
-  top: 3px;
-  float: right;
+@media screen and (max-width: 768px) {
+  .button-parent:has(.label-search-checked) {
+    background-color: #fcd34d;
+  }
+
+  .button-parent:hover {
+    background-color: #fcd34d;
+  }
 }
+
+/* .label-search-checked:hover::after {
+    content: url('../icons/closeLabel.svg');
+    position: relative;
+    top: 3px;
+    float: right;
+}
+.label-search-checked:focus::after {
+    content: url('../icons/closeLabel.svg');
+    position: relative;
+    top: 3px;
+    float: right;
+} */
 
 .label-tag-checked::after {
   content: url('../icons/close-tag.svg');
