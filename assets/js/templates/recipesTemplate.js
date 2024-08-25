@@ -70,7 +70,7 @@ export const recipesTemplate = (recipesData, App) => {
         article.appendChild(cardBody);
 
         // Add tailwindcss classes
-        article.classList.add('basis-1/4', 'mx-6', 'my-9', 'bg-white', 'rounded-2xl', 'shadow-lg', 'overflow-hidden', 'flex', 'flex-col', 'min-w-96' );
+        article.classList.add('basis-1/4', 'my-9', 'bg-white', 'rounded-2xl', 'shadow-lg', 'overflow-hidden', 'flex', 'flex-col', 'md:min-w-96' );
             cardHeader.classList.add('relative', 'basis-1/3');
                 img.classList.add('w-full', 'h-80', 'object-cover');
                 timeElement.classList.add('absolute', 'top-5', 'right-6', 'bg-amber-300', 'px-5', 'py-1', 'rounded-2xl', 'text-black',  'shadow-lg');

@@ -43,17 +43,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100%;
-    margin-block: 120px;
+    /* height: 100%;
+    margin-block: 120px; */
 }
 
 .input-text-search {
-    width: 1080px;
+    /* width: 1080px; */
     height: 64px;
+    margin-block: 20px;
 
 }
 
-.btn-text-search {
+/* .btn-text-search {
     position: absolute;
     top: 445px;
     right: 415px;
@@ -62,7 +63,7 @@
 .btn-text-search::after {
     content: url('../icons/searchCTA.svg');
     margin: 7px;
-}
+} */
 /* .btn-text-search:hover::after {
     content: url('../icons/searchCTAv2.svg');
     margin: 7px;
@@ -71,19 +72,21 @@
 .text-search-container {
     background-image: url('../images/bg.png');
     background-size: cover;
-    height: 667px;
+    /* height: 667px; */
 }
 
 .select-btn::after {
     content: url('../icons/dropdown-down.svg');
     position: relative;
-    left: 45px;
+    margin-left: 10px;
+    /* left: 45px; */
     /* left: 600px; */
 }
 .select-btn.open::after {
     content: url('../icons/dropdown-up.svg');
     position: relative;
-    left: 45px;
+    margin-left: 10px;
+    /* left: 45px; */
 }
 .label-search-checked:hover::after {
     content: url('../icons/closeLabel.svg');

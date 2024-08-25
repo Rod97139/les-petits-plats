@@ -80,7 +80,7 @@ export const optionsTemplate = (type, App) => {
                 const newLabelbutton = optionButton.cloneNode(true)
                 $labelSearchContainerByType.appendChild(newLabelbutton)
                 newLabelbutton.classList.remove('label-search-checked','focus:ring-amber-300')
-                newLabelbutton.classList.add('label-tag-checked', 'rounded-xl', 'h-[40px]', 'focus:ring-amber-500')
+                newLabelbutton.classList.add('label-tag-checked', 'rounded-xl', 'h-[50px]', 'focus:ring-amber-500', 'text-vw-3', 'md:text-base', 'flex', 'justify-between', 'items-center')
                 newLabelbutton.addEventListener('click', () => {
                     optionInput.checked = !optionInput.checked;
                     optionInput.checked ? optionButton.classList.add('bg-amber-300', 'font-bold', 'label-search-checked') : optionButton.classList.remove('bg-amber-300', 'font-bold', 'label-search-checked');
