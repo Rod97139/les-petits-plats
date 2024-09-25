@@ -1366,6 +1366,10 @@ select {
   width: 24vw;
 }
 
+.w-\[192px\] {
+  width: 192px;
+}
+
 .max-w-2xl {
   max-width: 42rem;
 }
@@ -2680,6 +2684,10 @@ select {
 
 .pb-5 {
   padding-bottom: 1.25rem;
+}
+
+.pb-8 {
+  padding-bottom: 2rem;
 }
 
 .text-left {
