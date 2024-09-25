@@ -1158,6 +1158,11 @@ select {
   margin-bottom: 0.5px;
 }
 
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -1313,8 +1318,16 @@ select {
   height: 50px;
 }
 
+.h-\[72px\] {
+  height: 72px;
+}
+
 .h-full {
   height: 100%;
+}
+
+.h-\[2rem\] {
+  height: 2rem;
 }
 
 .max-h-72 {
@@ -1330,8 +1343,16 @@ select {
   max-height: fit-content;
 }
 
+.max-h-\[2rem\] {
+  max-height: 2rem;
+}
+
 .min-h-\[4\.5rem\] {
   min-height: 4.5rem;
+}
+
+.min-h-\[2rem\] {
+  min-height: 2rem;
 }
 
 .w-48 {
@@ -1342,8 +1363,8 @@ select {
   width: 1050px;
 }
 
-.w-\[188px\] {
-  width: 188px;
+.w-\[192px\] {
+  width: 192px;
 }
 
 .w-\[this-is\\\\\] {
@@ -1364,10 +1385,6 @@ select {
 
 .w-vw-24 {
   width: 24vw;
-}
-
-.w-\[192px\] {
-  width: 192px;
 }
 
 .max-w-2xl {
@@ -1952,10 +1969,6 @@ select {
   gap: 0.5rem;
 }
 
-.gap-4 {
-  gap: 1rem;
-}
-
 .gap-5 {
   gap: 1.25rem;
 }
@@ -2485,6 +2498,11 @@ select {
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
+.bg-red-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
+}
+
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -2680,10 +2698,6 @@ select {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
-}
-
-.pb-5 {
-  padding-bottom: 1.25rem;
 }
 
 .pb-8 {
@@ -3127,12 +3141,6 @@ select {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.shadow-md {
-  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-}
-
 .shadow-sm {
   --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
@@ -3458,8 +3466,8 @@ select {
 @media screen and (min-width: 768px) {
   .tag-container::before {
     content: url('../icons/search-tag.svg');
-    position: relative;
-    top: 31px;
+    position: absolute;
+    top: 10px;
     left: 160px;
   }
 }
@@ -3657,10 +3665,6 @@ select {
     margin-right: 0.25rem;
   }
 
-  .md\:mt-0 {
-    margin-top: 0px;
-  }
-
   .md\:flex {
     display: flex;
   }
@@ -3695,10 +3699,6 @@ select {
 
   .md\:gap-6 {
     gap: 1.5rem;
-  }
-
-  .md\:gap-7 {
-    gap: 1.75rem;
   }
 
   .md\:px-4 {

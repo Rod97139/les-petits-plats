@@ -132,8 +132,8 @@
 @media screen and (min-width: 768px) {
     .tag-container::before {
         content: url('../icons/search-tag.svg');
-        position: relative;
-        top: 31px;
+        position: absolute;
+        top: 10px;
         left: 160px;
     }
 }
