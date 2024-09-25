@@ -70,17 +70,17 @@ export const recipesTemplate = (recipesData, App) => {
         article.appendChild(cardBody);
 
         // Add tailwindcss classes
-        article.classList.add('basis-1/4', 'my-9', 'bg-white', 'rounded-2xl', 'shadow-lg', 'overflow-hidden', 'flex', 'flex-col', 'md:min-w-96' );
+        article.classList.add('basis-1/4', 'bg-white', 'rounded-2xl', 'overflow-hidden', 'flex', 'flex-col', 'md:min-w-[480px]' );
             cardHeader.classList.add('relative', 'basis-1/3');
                 img.classList.add('w-full', 'h-80', 'object-cover');
                 timeElement.classList.add('absolute', 'top-5', 'right-6', 'bg-amber-300', 'px-5', 'py-1', 'rounded-2xl', 'text-black',  'shadow-lg');
             cardBody.classList.add('basis-2/3', 'flex', 'flex-col', 'p-5', 'h-full');
                 cardTitle.classList.add('text-2xl', 'my-5', 'font-anton');
-                cardContainer.classList.add('flex', 'flex-col', 'space-y-5', 'h-full', 'overflow-hidden');
-                    descriptionContainer.classList.add('basis-2/5', 'max-h-fit', 'overflow-hidden');
+                cardContainer.classList.add('flex', 'flex-col', 'space-y-5', 'h-full', 'justify-between');
+                    descriptionContainer.classList.add('basis-3/5', 'max-h-fit', 'overflow-hidden');
                         descriptionTitle.classList.add('font-bold', 'text-gray-500', 'mb-2');
                     //     descriptionContent.classList.add('text-justify');
-                    ingredientsContainer.classList.add('basis-3/5', 'h-full');
+                    ingredientsContainer.classList.add('basis-2/5', 'mt-auto');
                         ingredientsTitle.classList.add('font-bold', 'text-gray-500');
                         ingredientsContent.classList.add('grid', 'grid-cols-2', 'gap-2', 'py-5');
                 

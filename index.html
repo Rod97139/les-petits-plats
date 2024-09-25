@@ -17,15 +17,15 @@
             <h2 class="text-amber-300  md:text-2xl lg:text-6xl text-center font-anton lg:mx-64  mt-36">CHERCHEZ PARMI PLUS DE 1500 RECETTES 
                 DU QUOTIDIEN,SIMPLES ET DÉLICIEUSES
             </h2>
-            <form class=" relative md:flex md:items-center mt-2" id="text-search-form"  action="index.html" method="post">
-                <input class="input-text-search form-input  h-24 px-4 py-3 rounded w-full" placeholder="Rechercher une recette, un ingrédient, ..." id="text" name="text" type="search">
+            <form class=" relative md:flex md:items-center mt-2 max-w-[1482px] mx-auto" id="text-search-form"  action="index.html" method="post">
+                <input class="input-text-search form-input h-24 px-4 py-3 rounded w-full max-w-[1482px]" placeholder="Rechercher une recette, un ingrédient, ..." id="text" name="text" type="search">
                 <label class="hidden" for="text">Text search</label>
                 <!-- <button class="form-button px-1 py-3 text-transparent text-xs btn-text-search" type="submit">Search</button> -->
                 <div id="suggestions" class="text-white bg-black z-[100] justify-self-start w-[1050px]"></div>
                 <img class="delete-text global absolute top-[45px] right-[10px] hidden cursor-pointer" src="assets/icons/close-input.svg" alt="delete text button">
             </form>
         </div>
-        <div class="select-search-container px-0 md:px-4 my-6 flex flex-col md:flex-row justify-between w-full">
+        <div class="select-search-container px-0 md:px-4 my-6 flex flex-col md:flex-row justify-between w-full max-w-[1510px] mx-auto">
             <form id="filters" action="index.html" method="post" class="flex flex-row  gap-1 md:gap-6 max-w-2xl  ">
                 <!-- ul li  -->
                 <div class=" shadow-md bg-white w-48 rounded-xl min-h-[4.5rem] max-h-[4.5rem] overflow-hidden relative">
@@ -46,7 +46,7 @@
                 <p class="font-anton text-xl"><span class="mx-1 total-recipes">50</span><span>recettes</span></p>
             </div>
         </div>
-        <div class="label-search-container flex flex-row gap-4 md:gap-7 mx-4 justify-start">
+        <div class="label-search-container flex flex-row gap-4 md:px-4 md:gap-7 justify-start max-w-[1510px] mx-auto pb-5">
             <ul class="label-search-ingredients flex flex-col w-[188px] space-y-[10px]"></ul>
             <ul class="label-search-appliances flex flex-col w-[188px] space-y-[10px]"></ul>
             <ul class="label-search-ustensils flex flex-col w-[188px] space-y-[10px]" ></ul>
@@ -55,7 +55,7 @@
 
     </header>
     <main class="mx-auto">
-        <section class="recipes-wrapper flex max-md:flex-col justify-center md:flex-wrap gap-2">
+        <section class="recipes-wrapper flex max-md:flex-col justify-center md:flex-wrap gap-5">
           </section>
     </main>    
 </body>
