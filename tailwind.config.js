@@ -7,6 +7,9 @@ module.exports = {
       manrope: ["Manrope", "sans-serif"],
     },
     extend: {
+      overflow: {
+        "overlay": "overlay",
+      },
       fontSize: {
         'vw-1': '1vw',
         'vw-2': '2vw',

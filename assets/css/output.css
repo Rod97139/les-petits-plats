@@ -1184,6 +1184,10 @@ select {
   margin-top: auto;
 }
 
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
 .box-border {
   box-sizing: border-box;
 }
@@ -1303,6 +1307,14 @@ select {
   height: 100%;
 }
 
+.h-\[\] {
+  height: ;
+}
+
+.h-\[100\] {
+  height: 100;
+}
+
 .max-h-52 {
   max-height: 13rem;
 }
@@ -1332,8 +1344,8 @@ select {
   width: 1050px;
 }
 
-.w-\[160px\] {
-  width: 160px;
+.w-\[166px\] {
+  width: 166px;
 }
 
 .w-\[192px\] {
@@ -1354,14 +1366,6 @@ select {
 
 .w-full {
   width: 100%;
-}
-
-.w-\[164px\] {
-  width: 164px;
-}
-
-.w-\[166px\] {
-  width: 166px;
 }
 
 .max-w-2xl {
@@ -2594,16 +2598,16 @@ select {
   padding: 0.5rem;
 }
 
+.p-3 {
+  padding: 0.75rem;
+}
+
 .p-5 {
   padding: 1.25rem;
 }
 
 .p-8 {
   padding: 2rem;
-}
-
-.p-3 {
-  padding: 0.75rem;
 }
 
 .px-0 {
@@ -3444,6 +3448,10 @@ select {
   }
 }
 
+.tag-container {
+  overflow-y: overlay;
+}
+
 .placeholder-mobile::-moz-placeholder {
   font-size: 0.875rem;
   line-height: 1.25rem;
@@ -3653,6 +3661,12 @@ select {
   text-align: center;
 }
 
+@media (max-width: 1510px) {
+  .max-\[1510px\]\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media not all and (min-width: 768px) {
   .max-md\:flex-col {
     flex-direction: column;
@@ -3662,6 +3676,12 @@ select {
 @media (max-width: 584px) {
   .max-\[584px\]\:w-vw-28 {
     width: 28vw;
+  }
+}
+
+@media (max-width: 350px) {
+  .max-\[350px\]\:p-\[1px\] {
+    padding: 1px;
   }
 }
 
@@ -3681,8 +3701,8 @@ select {
     display: flex;
   }
 
-  .md\:w-\[160px\] {
-    width: 160px;
+  .md\:grid {
+    display: grid;
   }
 
   .md\:min-w-\[480px\] {
@@ -3699,10 +3719,6 @@ select {
 
   .md\:flex-row {
     flex-direction: row;
-  }
-
-  .md\:flex-wrap {
-    flex-wrap: wrap;
   }
 
   .md\:items-center {
@@ -3729,6 +3745,12 @@ select {
   }
 }
 
+@media (min-width: 1012px) {
+  .min-\[1012px\]\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
 @media (min-width: 1024px) {
   .lg\:mx-64 {
     margin-left: 16rem;
@@ -3738,6 +3760,22 @@ select {
   .lg\:text-6xl {
     font-size: 3.75rem;
     line-height: 1;
+  }
+}
+
+@media (min-width: 1280px) {
+  .xl\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1510px) {
+  .min-\[1510px\]\:grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .min-\[1510px\]\:grid-cols-3 {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 

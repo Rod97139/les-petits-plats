@@ -144,6 +144,10 @@
     }
 }
 
+.tag-container {
+    overflow-y: overlay;
+}
+
 .placeholder-mobile::placeholder {
     @apply text-sm md:text-base; /* Changez la taille du texte du placeholder pour mobile */
   }
