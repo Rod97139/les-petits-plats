@@ -1128,11 +1128,6 @@ select {
   margin-right: 0.5rem;
 }
 
-.mx-4 {
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -1156,11 +1151,6 @@ select {
 .my-\[0\.5px\] {
   margin-top: 0.5px;
   margin-bottom: 0.5px;
-}
-
-.my-auto {
-  margin-top: auto;
-  margin-bottom: auto;
 }
 
 .mb-2 {
@@ -1191,16 +1181,16 @@ select {
   margin-top: 1rem;
 }
 
-.mt-6 {
-  margin-top: 1.5rem;
-}
-
 .mt-8 {
   margin-top: 2rem;
 }
 
 .mt-auto {
   margin-top: auto;
+}
+
+.ml-1 {
+  margin-left: 0.25rem;
 }
 
 .box-border {
@@ -1326,10 +1316,6 @@ select {
   height: 100%;
 }
 
-.h-\[2rem\] {
-  height: 2rem;
-}
-
 .max-h-72 {
   max-height: 18rem;
 }
@@ -1343,16 +1329,8 @@ select {
   max-height: fit-content;
 }
 
-.max-h-\[2rem\] {
-  max-height: 2rem;
-}
-
 .min-h-\[4\.5rem\] {
   min-height: 4.5rem;
-}
-
-.min-h-\[2rem\] {
-  min-height: 2rem;
 }
 
 .w-48 {
@@ -1383,8 +1361,20 @@ select {
   width: 100%;
 }
 
-.w-vw-24 {
-  width: 24vw;
+.w-\[\] {
+  width: ;
+}
+
+.w-\[170px\] {
+  width: 170px;
+}
+
+.w-\[175px\] {
+  width: 175px;
+}
+
+.w-\[177px\] {
+  width: 177px;
 }
 
 .max-w-2xl {
@@ -2498,11 +2488,6 @@ select {
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
-.bg-red-600 {
-  --tw-bg-opacity: 1;
-  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
-}
-
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
@@ -3321,18 +3306,7 @@ select {
 
 /* Hide scrollbar for Chrome, Safari and Opera */
 
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-
 /* Hide scrollbar for IE, Edge and Firefox */
-
-.no-scrollbar {
-  -ms-overflow-style: none;
-  /* IE and Edge */
-  scrollbar-width: none;
-  /* Firefox */
-}
 
 @font-face {
   font-family: 'Anton';
@@ -3463,14 +3437,16 @@ select {
   float: right;
 }
 
-@media screen and (min-width: 768px) {
-  .tag-container::before {
-    content: url('../icons/search-tag.svg');
-    position: absolute;
-    top: 10px;
-    left: 160px;
-  }
+/* @media screen and (min-width: 768px) { */
+
+.tag-container::before {
+  content: url('../icons/search-tag.svg');
+  position: absolute;
+  top: 10px;
+  right: 15px;
 }
+
+/* } */
 
 /* les input dans les ul*/
 
@@ -3650,6 +3626,24 @@ select {
 @media not all and (min-width: 768px) {
   .max-md\:flex-col {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 584px) {
+  .max-\[584px\]\:w-vw-26 {
+    width: 26vw;
+  }
+
+  .max-\[584px\]\:w-vw-28 {
+    width: 28vw;
+  }
+
+  .max-\[584px\]\:w-vw-30 {
+    width: 30vw;
+  }
+
+  .max-\[584px\]\:w-vw-29 {
+    width: 29vw;
   }
 }
 
