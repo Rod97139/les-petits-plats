@@ -3428,8 +3428,6 @@ select {
   float: right;
 }
 
-/* @media screen and (min-width: 768px) { */
-
 .tag-container::before {
   content: url('../icons/search-tag.svg');
   position: absolute;
@@ -3437,7 +3435,34 @@ select {
   right: 15px;
 }
 
-/* } */
+.placeholder-mobile::-moz-placeholder {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.placeholder-mobile::placeholder {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+@media (min-width: 768px) {
+  .placeholder-mobile::-moz-placeholder {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  .placeholder-mobile::placeholder {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+}
+
+.placeholder-mobile::-moz-placeholder {
+  /* Changez la taille du texte du placeholder pour mobile */
+}
+
+.placeholder-mobile::placeholder {
+  /* Changez la taille du texte du placeholder pour mobile */
+}
 
 /* les input dans les ul*/
 
@@ -3499,6 +3524,11 @@ select {
 .hover\:before\:text-center:hover::before {
   content: var(--tw-content);
   text-align: center;
+}
+
+.focus\:border-amber-300:focus {
+  --tw-border-opacity: 1;
+  border-color: rgb(252 211 77 / var(--tw-border-opacity));
 }
 
 .focus\:border-black:focus {
