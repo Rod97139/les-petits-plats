@@ -64,7 +64,7 @@ class App {
                             const button = $container.querySelector('button')
                             if (button.classList.contains('open')) {
                                 // ul.classList.toggle('hidden')
-                                $container.classList.toggle('max-h-[4.5rem]')
+                                $container.classList.toggle('max-h-[3.5rem]')
                                 $container.classList.toggle('max-h-[20rem]')
                                 button.classList.toggle('open')                            
                             }

@@ -1291,16 +1291,12 @@ select {
   height: 20rem;
 }
 
-.h-\[37\.5px\] {
-  height: 37.5px;
+.h-\[3\.5rem\] {
+  height: 3.5rem;
 }
 
 .h-\[50px\] {
   height: 50px;
-}
-
-.h-\[72px\] {
-  height: 72px;
 }
 
 .h-full {
@@ -1315,8 +1311,8 @@ select {
   max-height: 20rem;
 }
 
-.max-h-\[4\.5rem\] {
-  max-height: 4.5rem;
+.max-h-\[3\.5rem\] {
+  max-height: 3.5rem;
 }
 
 .max-h-fit {
@@ -1324,8 +1320,8 @@ select {
   max-height: fit-content;
 }
 
-.min-h-\[4\.5rem\] {
-  min-height: 4.5rem;
+.min-h-\[3\.5rem\] {
+  min-height: 3.5rem;
 }
 
 .w-48 {
@@ -1358,6 +1354,14 @@ select {
 
 .w-full {
   width: 100%;
+}
+
+.w-\[164px\] {
+  width: 164px;
+}
+
+.w-\[166px\] {
+  width: 166px;
 }
 
 .max-w-2xl {
@@ -2598,6 +2602,10 @@ select {
   padding: 2rem;
 }
 
+.p-3 {
+  padding: 0.75rem;
+}
+
 .px-0 {
   padding-left: 0px;
   padding-right: 0px;
@@ -3363,14 +3371,13 @@ select {
   content: url('../icons/dropdown-down.svg');
   position: relative;
   margin-left: 10px;
+  transition: transform 0.3s ease-in-out;
   /* left: 45px; */
   /* left: 600px; */
 }
 
 .select-btn.open::after {
-  content: url('../icons/dropdown-up.svg');
-  position: relative;
-  margin-left: 10px;
+  transform: rotate(-180deg);
   /* left: 45px; */
 }
 

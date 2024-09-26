@@ -79,13 +79,12 @@
     content: url('../icons/dropdown-down.svg');
     position: relative;
     margin-left: 10px;
+    transition: transform 0.3s ease-in-out;
     /* left: 45px; */
     /* left: 600px; */
 }
 .select-btn.open::after {
-    content: url('../icons/dropdown-up.svg');
-    position: relative;
-    margin-left: 10px;
+    transform: rotate(-180deg);
     /* left: 45px; */
 }
 @media screen and (min-width: 768px) {
