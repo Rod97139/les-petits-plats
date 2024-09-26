@@ -1152,10 +1152,6 @@ select {
   margin-bottom: 0.5rem;
 }
 
-.ml-1 {
-  margin-left: 0.25rem;
-}
-
 .ml-2 {
   margin-left: 0.5rem;
 }
@@ -1311,8 +1307,8 @@ select {
   height: 100%;
 }
 
-.max-h-72 {
-  max-height: 18rem;
+.max-h-52 {
+  max-height: 13rem;
 }
 
 .max-h-\[20rem\] {
@@ -1340,8 +1336,8 @@ select {
   width: 1050px;
 }
 
-.w-\[177px\] {
-  width: 177px;
+.w-\[160px\] {
+  width: 160px;
 }
 
 .w-\[192px\] {
@@ -3432,7 +3428,13 @@ select {
   content: url('../icons/search-tag.svg');
   position: absolute;
   top: 10px;
-  right: 15px;
+  right: 25px;
+}
+
+@media screen and (max-width: 584px) {
+  .tag-container::before {
+    right: 4vw;
+  }
 }
 
 .placeholder-mobile::-moz-placeholder {
@@ -3651,8 +3653,8 @@ select {
 }
 
 @media (max-width: 584px) {
-  .max-\[584px\]\:w-vw-30 {
-    width: 30vw;
+  .max-\[584px\]\:w-vw-28 {
+    width: 28vw;
   }
 }
 
@@ -3672,8 +3674,8 @@ select {
     display: flex;
   }
 
-  .md\:w-\[180px\] {
-    width: 180px;
+  .md\:w-\[160px\] {
+    width: 160px;
   }
 
   .md\:min-w-\[480px\] {

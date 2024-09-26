@@ -13,7 +13,7 @@ export const optionsTemplate = (type, App) => {
     const $labelSearchContainerByType = document.querySelector(`.label-search-${type}`)
     $labelSearchContainerByType.innerHTML = ""
     tagSearchInput.setAttribute("type", "search");
-    tagSearchInput.classList.add('ml-1', 'md:mx-1','w-[177px]', 'max-[584px]:w-vw-30','md:w-[180px]' , 'p-2', 'rounded', 'border', 'border-gray-300', 'mb-2', 'text-sm', 'focus:outline-none', 'focus:border-gray-600', 'placeholder-gray-500');
+    tagSearchInput.classList.add( 'md:mx-1','w-[160px]', 'max-[584px]:w-vw-28','md:w-[160px]' , 'p-2', 'rounded', 'border', 'border-gray-300', 'mb-2', 'text-sm', 'focus:outline-none', 'focus:border-gray-600', 'placeholder-gray-500', 'self-center');
     tagSearchInput.setAttribute("id", `tag-search-${type}`);
     tagSearchInput.addEventListener('keyup', (e) => {
         const input = e.target.value.toLowerCase()
