@@ -65,7 +65,7 @@ export const optionsTemplate = (type, App) => {
             optionLabel.textContent = capitalizedOption;
             // tabindex="0" role="button" aria-pressed="false" aria-labelledby="checkbox-label-1"
             optionButton.textContent = capitalizedOption;
-            optionButton.classList.add('hover:bg-amber-300', 'px-3', 'py-2', 'my-[0.5px]', 'text-sm', 'label-search', 'w-full', 'text-left', 'h-[37.5px]', 'focus:outline-none', 'focus:ring-2', 'focus:ring-amber-300', 'focus:ring-opacity-50');
+            optionButton.classList.add('hover:bg-amber-300', 'px-3', 'py-2', 'my-[0.5px]', 'text-sm', 'label-search', 'w-full', 'text-left', 'focus:outline-none', 'focus:ring-2', 'focus:ring-amber-300', 'focus:ring-opacity-50');
             optionButton.type = "button";
             optionButton.dataset.checkboxId = `${newType}-${i}`;
             optionInput.type = "checkbox";
