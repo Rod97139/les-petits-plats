@@ -62,9 +62,10 @@ class App {
                         dropdownUls.forEach(ul => {
                             const $container = ul.parentElement
                             const button = $container.querySelector('button')
-                            if (!ul.classList.contains('hidden')) {
-                                ul.classList.toggle('hidden')
+                            if (button.classList.contains('open')) {
+                                // ul.classList.toggle('hidden')
                                 $container.classList.toggle('max-h-[4.5rem]')
+                                $container.classList.toggle('max-h-[20rem]')
                                 button.classList.toggle('open')                            
                             }
                         })

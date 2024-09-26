@@ -1123,11 +1123,6 @@ select {
   margin-right: 0.25rem;
 }
 
-.mx-2 {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-}
-
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
@@ -1155,6 +1150,10 @@ select {
 
 .mb-2 {
   margin-bottom: 0.5rem;
+}
+
+.ml-1 {
+  margin-left: 0.25rem;
 }
 
 .ml-2 {
@@ -1187,10 +1186,6 @@ select {
 
 .mt-auto {
   margin-top: auto;
-}
-
-.ml-1 {
-  margin-left: 0.25rem;
 }
 
 .box-border {
@@ -1320,6 +1315,10 @@ select {
   max-height: 18rem;
 }
 
+.max-h-\[20rem\] {
+  max-height: 20rem;
+}
+
 .max-h-\[4\.5rem\] {
   max-height: 4.5rem;
 }
@@ -1341,6 +1340,10 @@ select {
   width: 1050px;
 }
 
+.w-\[177px\] {
+  width: 177px;
+}
+
 .w-\[192px\] {
   width: 192px;
 }
@@ -1359,22 +1362,6 @@ select {
 
 .w-full {
   width: 100%;
-}
-
-.w-\[\] {
-  width: ;
-}
-
-.w-\[170px\] {
-  width: 170px;
-}
-
-.w-\[175px\] {
-  width: 175px;
-}
-
-.w-\[177px\] {
-  width: 177px;
 }
 
 .max-w-2xl {
@@ -3417,6 +3404,10 @@ select {
   }
 }
 
+.w-48{
+  transition: max-height 0.3s ease-in-out;
+}
+
 /* .label-search-checked:hover::after {
     content: url('../icons/closeLabel.svg');
     position: relative;
@@ -3630,20 +3621,8 @@ select {
 }
 
 @media (max-width: 584px) {
-  .max-\[584px\]\:w-vw-26 {
-    width: 26vw;
-  }
-
-  .max-\[584px\]\:w-vw-28 {
-    width: 28vw;
-  }
-
   .max-\[584px\]\:w-vw-30 {
     width: 30vw;
-  }
-
-  .max-\[584px\]\:w-vw-29 {
-    width: 29vw;
   }
 }
 

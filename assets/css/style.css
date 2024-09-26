@@ -110,6 +110,9 @@
         background-color: #fcd34d;
     }
 }
+.w-48{
+    transition: max-height 0.3s ease-in-out;
+}
 /* .label-search-checked:hover::after {
     content: url('../icons/closeLabel.svg');
     position: relative;

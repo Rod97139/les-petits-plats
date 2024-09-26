@@ -11,7 +11,8 @@ export const dropdown = () => {
 
         button.addEventListener('click', () => {
             container.classList.toggle('max-h-[4.5rem]')
-            ulToDrop.classList.toggle('hidden')
+            container.classList.toggle('max-h-[20rem]')
+            // ulToDrop.classList.toggle('hidden')
             button.classList.toggle('open')
             
         })
